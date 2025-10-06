@@ -1,12 +1,43 @@
 allow_embedding: false
+db_schema:
+  table_1:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: subject
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: due_date
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      name: priority
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: assignment_type
+      type: string
+    - admin_ui: {order: 5, width: 200}
+      name: completed
+      type: bool
+    - admin_ui: {order: 6, width: 200}
+      name: date_created
+      type: date
+    server: full
+    title: Table 1
 dependencies: []
-name: M3 App 1
-package_name: M3_App_1
+metadata: {title: 'Procrastinator Tracker App '}
+name: Procrastinator app final
+package_name: Procrastinator_app_final
 renamed: true
 runtime_options:
   client_version: '3'
   server_spec: {base: python310-minimal}
   server_version: python3-sandbox
   version: 2
-services: []
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
 startup_form: Form1
