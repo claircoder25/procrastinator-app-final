@@ -3,9 +3,12 @@ unique_ids:
     standard-page.html: VNDZRMMGUBTWNGRKSJSBBW36OE4FBAD7
     theme.css: LVW7KW3ON4YCACCZB4E6FCZE2HINSITY
   forms:
+    Assignmentview: '1759805338828939277701198.6174'
+    Assignmentview.ItemTemplate2: '1759809215862364867959066.07306'
+    Assignmentview.ItemTemplate3: '1759810168415840743203847.4878'
+    Assignmentview.RowTemplate1: '175980940499495249954407.37027'
     Form1: VPIK3DUBMF4MSY7IEGGM4RFG35DFFWMN
     Form1.ItemTemplate1: '1759719093593449256530069.7659'
-    view_all: '1759805338828939277701198.6174'
   modules: {}
   scripts: {}
   server_modules: {}

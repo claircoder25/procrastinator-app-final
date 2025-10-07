@@ -26,8 +26,7 @@ class Form1(Form1Template):
     # The 'if x['due_date'] else datetime.max.date()' handles assignments with no due date
     assignments = sorted(assignments, key=lambda x: x['due_date'] if x['due_date'] else datetime.max.date())
 
-    # Put the assignments into the repeating panel so they show on screen
-    self.repeating_panel_1.items = assignments
+   
 
   def button_add_click(self, **event_args):
     """This runs when the user clicks the 'Add Assignment' button"""
@@ -88,8 +87,13 @@ class Form1(Form1Template):
     self.repeating_panel_1.items = due_soon
 
   def button_view_all_click(self, **event_args):
-    """This runs when user clicks 'View All' - shows all pending assignments"""
+    """Open the View All form"""
+    # Import the ViewAllForm
+    from .ViewAllForm import ViewAllForm
 
+    # Navigate to the new form
+    open_form('ViewAllForm')
+    
     # Just reload all assignments (same as when app first opens)
     self.load_assignments()
 
