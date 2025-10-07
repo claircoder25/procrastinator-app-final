@@ -65,7 +65,8 @@ components:
       name: button_weekly_view
       properties: {role: filled-button, text: To Do This Week}
       type: Button
-    - layout_properties: {grid_position: 'GYCVJS,BMFWVT'}
+    - event_bindings: {click: button_stats_click}
+      layout_properties: {grid_position: 'GYCVJS,BMFWVT'}
       name: button_stats
       properties: {role: filled-button, text: Statistics}
       type: Button
