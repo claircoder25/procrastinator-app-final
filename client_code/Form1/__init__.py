@@ -162,3 +162,11 @@ Pending: {pending}
 Completion Rate: {completion_rate:.1f}%
 Average Time to Complete: {avg_days:.1f} days
 """)
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def drop_down_type_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
