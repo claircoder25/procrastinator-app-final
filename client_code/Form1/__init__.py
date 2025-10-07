@@ -86,13 +86,15 @@ class Form1(Form1Template):
     # Display only these assignments
     self.repeating_panel_1.items = due_soon
 
+  # When the user clicks the View All button, they will be taken to the Assignment view form
+  #This form displays all past and upcoming assignments
   def button_view_all_click(self, **event_args):
-    """Open the View All form"""
-    # Import the ViewAllForm
-    from .ViewAllForm import ViewAllForm
+    """Open the Assignment View form"""
+    # Import the Assignmentview
+    from. .Assignmentview import Assignmentview
 
     # Navigate to the new form
-    open_form('ViewAllForm')
+    open_form('Assignmentview')
     
     # Just reload all assignments (same as when app first opens)
     self.load_assignments()
@@ -130,7 +132,7 @@ class Form1(Form1Template):
     # COUNT: How many are still pending?
     pending = len(app_tables.assignments.search(completed=False))
 
-    # CALCULATE: What percentage are completed?
+    # CALCULATE: What percentage is completed?
     if total > 0:  # Make sure we don't divide by zero
       completion_rate = (completed / total) * 100
     else:

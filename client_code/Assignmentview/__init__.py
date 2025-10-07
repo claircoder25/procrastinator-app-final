@@ -31,7 +31,7 @@ class Assignmentview(AssignmentviewTemplate):
   def button_back_click(self, **event_args):
     """Go back to the main form"""
     # Import your main form
-    from .Form1 import Form1
+    from.Form1 import Form1
 
     # Navigate back to main form
     open_form('Form1')
