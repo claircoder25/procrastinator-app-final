@@ -22,7 +22,7 @@ components:
       layout_properties: {grid_position: 'ODMPTS,TQSFMD'}
       name: drop_down_priority
       properties:
-        items: [High, Medium, Low]
+        items: [High Level Priority, Medium Level Priority, Low Level Priority]
       type: DropDown
     - data_bindings: []
       event_bindings: {change: drop_down_type_change}
@@ -35,10 +35,6 @@ components:
     name: content_panel_copy
     properties: {col_widths: '{}'}
     type: ColumnPanel
-  - layout_properties: {grid_position: 'WKXTHQ,MXKJIJ'}
-    name: repeating_panel_1
-    properties: {item_template: Form1.ItemTemplate4}
-    type: RepeatingPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
