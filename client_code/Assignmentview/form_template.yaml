@@ -1,10 +1,13 @@
 components:
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: All Assignments}
+  type: Label
 - components:
-  - data_bindings: []
-    layout_properties: {grid_position: 'MMTENX,XVNKGZ'}
-    name: card_1
-    properties: {role: outlined-card}
-    type: ColumnPanel
   - layout_properties: {grid_position: 'BFRMTL,PLVDTF'}
     name: item_name
     properties: {text: Assignment Name}
@@ -18,18 +21,15 @@ components:
     name: repeating_panel_1
     properties: {item_template: Assignmentview.ItemTemplate2}
     type: RepeatingPanel
-  layout_properties: {slot: default}
+  layout_properties: {slot: left-nav}
   name: content_panel
   properties: {}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
-  name: navbar_links
-  properties: {}
-  type: FlowPanel
-- layout_properties: {slot: title}
-  name: label_1
-  properties: {text: All Assignments}
-  type: Label
+- data_bindings: []
+  layout_properties: {slot: default}
+  name: card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
