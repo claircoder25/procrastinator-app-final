@@ -25,7 +25,7 @@ db_schema:
       name: date_created
       type: date
     server: full
-    title: Table 1
+    title: Assignments
 dependencies: []
 metadata: {title: 'Procrastinator Tracker App '}
 name: Procrastinator app final
