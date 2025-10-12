@@ -1,25 +1,27 @@
 components:
-- layout_properties: {slot: nav-right}
-  name: navbar_links
-  properties: {}
-  type: FlowPanel
 - layout_properties: {slot: title}
   name: label_1
   properties: {text: All Assignments}
   type: Label
 - components:
-  - layout_properties: {grid_position: 'HTGYOL,FPSXQP'}
-    name: repeating_panel_1
-    properties: {item_template: ViewAllForm.ItemTemplate7}
-    type: RepeatingPanel
+  - layout_properties: {grid_position: 'QPSGJO,ICHDIU'}
+    name: item_name
+    properties: {text: Showing All Pending Assignments}
+    type: Label
   layout_properties: {slot: left-nav}
   name: content_panel
   properties: {}
   type: ColumnPanel
 - layout_properties: {slot: default}
-  name: item_name
-  properties: {text: Showing All Pending Assignments}
-  type: Label
+  name: repeating_panel_2
+  properties: {item_template: ViewAllForm.ItemTemplate8}
+  type: RepeatingPanel
+- components: []
+  event_bindings: {click: logout_link_click}
+  layout_properties: {slot: nav-right}
+  name: logout_link
+  properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+  type: Link
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
