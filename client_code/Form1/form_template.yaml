@@ -62,7 +62,7 @@ components:
       type: Button
     - layout_properties: {grid_position: 'NRMMKX,LURIAI'}
       name: button_due_soon
-      properties: {role: filled-button, text: Due Soon}
+      properties: {role: filled-button, text: Assignment type Templates}
       type: Button
     - layout_properties: {grid_position: 'YDMWFD,KBROFL'}
       name: button_weekly_view

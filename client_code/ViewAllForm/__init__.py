@@ -1,4 +1,4 @@
-from ._anvil_designer import AssignmentviewTemplate
+from ._anvil_designer import ViewAllFormTemplate
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -6,7 +6,7 @@ from anvil.tables import app_tables
 from datetime import datetime
 
 
-class Assignmentview(AssignmentviewTemplate):
+class ViewAllForm(ViewAllFormTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

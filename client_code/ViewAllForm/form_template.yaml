@@ -1,0 +1,26 @@
+components:
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: All Assignments}
+  type: Label
+- components:
+  - layout_properties: {grid_position: 'HTGYOL,FPSXQP'}
+    name: repeating_panel_1
+    properties: {item_template: ViewAllForm.ItemTemplate7}
+    type: RepeatingPanel
+  layout_properties: {slot: left-nav}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: default}
+  name: item_name
+  properties: {text: Showing All Pending Assignments}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

@@ -86,15 +86,15 @@ class Form1(Form1Template):
     # Display only these assignments
     self.repeating_panel_1.items = due_soon
 
-  # When the user clicks the View All button, they will be taken to the Assignment view form
+  # When the user clicks the View All button, they will be taken to the ViewAllForm form
   #This form displays all past and upcoming assignments
   def button_view_all_click(self, **event_args):
-    """Open the Assignment View form"""
-    # Import the Assignmentview
-    from. .Assignmentview import Assignmentview
+    """Open the ViewAllForm"""
+    # Import the ViewAllForm
+    from. .ViewAllForm import ViewAllForm
 
     # Navigate to the new form
-    open_form('Assignmentview')
+    open_form('ViewAllForm')
     
     # Just reload all assignments (same as when app first opens)
     self.load_assignments()
