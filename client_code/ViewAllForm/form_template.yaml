@@ -1,16 +1,24 @@
 components:
 - layout_properties: {slot: title}
   name: label_1
-  properties: {text: All Assignments}
+  properties: {foreground: 'theme:On Surface Variant', text: All Assignments}
   type: Label
 - components:
-  - layout_properties: {grid_position: 'QPSGJO,ICHDIU'}
-    name: item_name
-    properties: {text: Showing All Pending Assignments}
-    type: Label
+  - layout_properties: {grid_position: 'UCKLOJ,LPJLCT'}
+    name: button_back
+    properties: {role: elevated-button, text: ← Back To Home}
+    type: Button
+  - layout_properties: {grid_position: 'MXUXPV,EKCJFU'}
+    name: button_sort_by_priority
+    properties: {role: elevated-button, text: Sort By Priority}
+    type: Button
+  - layout_properties: {grid_position: 'UVFJMP,TISVFZ'}
+    name: button_sort_by_subject
+    properties: {role: elevated-button, text: Sort By Subject}
+    type: Button
   layout_properties: {slot: left-nav}
   name: content_panel
-  properties: {}
+  properties: {background: 'theme:Secondary'}
   type: ColumnPanel
 - layout_properties: {slot: default}
   name: repeating_panel_2

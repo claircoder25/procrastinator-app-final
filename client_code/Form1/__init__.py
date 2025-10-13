@@ -176,3 +176,7 @@ Average Time to Complete: {avg_days:.1f} days
   def drop_down_type_change(self, **event_args):
     """This method is called when an item is selected"""
     pass
+
+  def projects_menu_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
