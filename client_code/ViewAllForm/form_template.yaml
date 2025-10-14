@@ -4,7 +4,8 @@ components:
   properties: {foreground: 'theme:On Surface Variant', text: All Assignments}
   type: Label
 - components:
-  - layout_properties: {grid_position: 'UCKLOJ,LPJLCT'}
+  - event_bindings: {click: button_back_click}
+    layout_properties: {grid_position: 'UCKLOJ,LPJLCT'}
     name: button_back
     properties: {role: elevated-button, text: ← Back To Home}
     type: Button

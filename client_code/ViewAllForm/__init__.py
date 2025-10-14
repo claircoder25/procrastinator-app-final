@@ -26,18 +26,22 @@ class ViewAllForm(ViewAllFormTemplate):
     )
 
     # Display the assignments in the repeating panel
-    # The repeating panel uses the row template to show each assignment
+    # The repeating panel uses your row template to show each assignment
     self.repeating_panel_2.items = assignments
 
-    # Update the count label (if you have one)
-    # This shows "Showing 5 assignments" at the top
-    self.label_count.text = f"Showing {len(assignments)} pending assignments"
+    # Update the count label (OPTIONAL - only if you added this label)
+    # If you have a label named 'label_count', this will show the count
+    # If not, this section will be skipped
+    if hasattr(self, 'label_count'):
+      self.label_count.text = f"Showing {len(assignments)} pending assignments"
 
   def button_back_click(self, **event_args):
     """Go back to the main form/home screen"""
+    # Open Form1
+    open_form('Form1')
 
     # Import the main form (Form1)
-    from .Form1 import Form1
+    from.Form1 import Form1
 
     # Navigate back to Form1
     # This replaces the current screen with Form1
@@ -66,7 +70,7 @@ class ViewAllForm(ViewAllFormTemplate):
     )
 
     # Update the display
-    self.repeating_panel_2.items = assignments
+    self.repeating_panel_1.items = assignments
     self.label_count.text = f"Showing {len(assignments)} assignments (sorted by priority)"
 
   def button_sort_by_subject_click(self, **event_args):
@@ -82,6 +86,5 @@ class ViewAllForm(ViewAllFormTemplate):
     )
 
     # Update the display
-    self.repeating_panel_2.items = assignments
+    self.repeating_panel_1.items = assignments
     self.label_count.text = f"Showing {len(assignments)} assignments (sorted by subject)"
-  
