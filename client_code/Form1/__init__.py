@@ -180,3 +180,11 @@ Average Time to Complete: {avg_days:.1f} days
   def projects_menu_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def create_new_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+  def text_box_name_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass

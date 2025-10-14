@@ -84,3 +84,4 @@ class ViewAllForm(ViewAllFormTemplate):
     # Update the display
     self.repeating_panel_2.items = assignments
     self.label_count.text = f"Showing {len(assignments)} assignments (sorted by subject)"
+  
