@@ -132,3 +132,16 @@ Average Time to Complete: {avg_days:.1f} days
 
 Keep up the great work! 🌟
 """)
+
+  def features_menu_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+  def button_templates_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  
+def button_templates_click(self, **event_args):
+    """Navigate to AssignmentTypeTemplates form"""
+    open_form('AssignmentTypeTemplates')
