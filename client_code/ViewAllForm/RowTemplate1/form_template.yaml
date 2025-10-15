@@ -1,36 +1,36 @@
 components:
 - components:
   - components:
+    - event_bindings: {click: button_add_click}
+      layout_properties: {grid_position: 'OCGGES,ANAOYK'}
+      name: button_add
+      properties: {align: left, role: null, text: + Add New Assignment}
+      type: Button
     - layout_properties: {grid_position: 'KOGZTL,YFYMDZ'}
       name: file_loader_1
       properties: {background: 'theme:Secondary', icon: 'fa:upload', role: filled-button, text: Upload Assignment Document}
       type: FileLoader
     - components:
-      - layout_properties: {grid_position: 'HFCACW,WCUUIM'}
-        name: text_box_name
-        properties: {placeholder: Assignment Name}
-        type: TextBox
-      - layout_properties: {grid_position: 'LYNEET,QRSAVE'}
-        name: text_box_subject
-        properties: {placeholder: Subject}
-        type: TextBox
-      - layout_properties: {grid_position: 'YHUKRK,POAOSU'}
-        name: date_picker_due
-        properties: {pick_time: true, placeholder: Date and Time Due}
-        type: DatePicker
-      - event_bindings: {change: drop_down_type_change}
-        layout_properties: {grid_position: 'ODMPTS,TQSFMD'}
-        name: drop_down_priority
-        properties:
-          items: [High Level Priority, Medium Level Priority, Low Level Priority]
-        type: DropDown
-      - data_bindings: []
-        event_bindings: {change: drop_down_type_change}
-        layout_properties: {grid_position: 'FMBDPC,EKYGBC'}
-        name: drop_down_type
-        properties:
-          items: [Essay, Group Project, Presentation, 'Quiz ', Exam, Creative Project, Other, '']
-        type: DropDown
+      - layout_properties: {grid_position: 'DCTDKZ,PDGIFD'}
+        name: label_assignment_name
+        properties: {background: 'theme:Surface Variant', foreground: 'theme:Secondary', text: ' {item[''name'']}'}
+        type: Label
+      - layout_properties: {grid_position: 'NPNWSX,WYYNJE'}
+        name: label_subject
+        properties: {background: 'theme:Surface Variant', foreground: 'theme:On Primary Container', text: 'Subject: {item[''subject'']}'}
+        type: Label
+      - layout_properties: {grid_position: 'NUQFNA,EENSRO'}
+        name: label_due_date
+        properties: {background: 'theme:Surface Variant', foreground: 'theme:Secondary', text: 'Due: {item[''due_date'']}'}
+        type: Label
+      - layout_properties: {grid_position: 'ODMPTS,RIHFXH'}
+        name: label_priority
+        properties: {background: 'theme:Surface Variant', foreground: 'theme:Secondary', role: null, text: 'Priority, High, Medium, or Low: {item[''priority'']}'}
+        type: Label
+      - layout_properties: {grid_position: 'FMBDPC,ITCOTY'}
+        name: label_type
+        properties: {background: 'theme:Surface Variant', foreground: 'theme:Secondary', text: 'Type: {item[''assignment_type'']}'}
+        type: Label
       - layout_properties: {grid_position: 'TTGZOV,DZKFUC'}
         name: label_time_remaining
         properties: {background: 'theme:Surface Variant', foreground: 'theme:On Secondary Container', role: input-prompt, text: ''}
@@ -45,14 +45,15 @@ components:
       name: button_complete
       properties: {align: center, background: '#afc9a1', bold: true, foreground: 'theme:On Primary Container', role: elevated-button, text: 'Mark Assignment as Completed '}
       type: Button
-    - layout_properties: {grid_position: 'EBVJWT,PTJTDV'}
-      name: outlined_button_1
+    - event_bindings: {click: button_delete_click}
+      layout_properties: {grid_position: 'EBVJWT,PTJTDV'}
+      name: button_delete
       properties: {align: right, foreground: 'theme:Error', role: outlined-button, text: 'Delete Assignment '}
       type: Button
     event_bindings: {click: create_new_click}
     layout_properties: {grid_position: 'IKIUOI,NBYLOB'}
     name: create_new
-    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: null, foreground: 'theme:Primary', icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Add New Assignment Below, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: null, foreground: 'theme:On Primary', icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
     type: Link
   layout_properties: {}
   name: card_1

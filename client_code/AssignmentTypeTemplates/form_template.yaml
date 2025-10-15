@@ -1,5 +1,10 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'KVTLIB,RTBMTZ'}
+    name: grid_panel_1
+    properties: {}
+    type: GridPanel
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -7,6 +12,15 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Assignment Type Templates}
+  type: Label
+- event_bindings: {click: button_back_click}
+  layout_properties: {slot: left-nav}
+  name: button_back
+  properties: {role: elevated-button, text: ← Back To Home}
+  type: Button
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

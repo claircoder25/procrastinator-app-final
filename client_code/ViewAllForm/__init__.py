@@ -41,7 +41,7 @@ class ViewAllForm(ViewAllFormTemplate):
     open_form('Form1')
 
     # Import the main form (Form1)
-    from.Form1 import Form1
+    from ..Form1 import Form1
 
     # Navigate back to Form1
     # This replaces the current screen with Form1
@@ -70,7 +70,7 @@ class ViewAllForm(ViewAllFormTemplate):
     )
 
     # Update the display
-    self.repeating_panel_1.items = assignments
+    self.repeating_panel_2.items = assignments
     self.label_count.text = f"Showing {len(assignments)} assignments (sorted by priority)"
 
   def button_sort_by_subject_click(self, **event_args):
@@ -86,5 +86,5 @@ class ViewAllForm(ViewAllFormTemplate):
     )
 
     # Update the display
-    self.repeating_panel_1.items = assignments
+    self.repeating_panel_2.items = assignments
     self.label_count.text = f"Showing {len(assignments)} assignments (sorted by subject)"
