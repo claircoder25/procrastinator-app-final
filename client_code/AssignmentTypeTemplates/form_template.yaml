@@ -2,48 +2,52 @@ components:
 - components:
   - layout_properties: {grid_position: 'NTRWRO,ZDKAMH'}
     name: label_3
-    properties: {foreground: 'theme:Secondary', text: Embrace your inner Hermione Granger and Rory Gilmore and start studying!}
+    properties: {align: center, foreground: 'theme:Secondary', role: title, text: Embrace your inner Hermione Granger and Rory Gilmore and start studying!}
     type: Label
   - layout_properties: {grid_position: 'UAYMBU,TDQNNT KUOJQY,ONWIUP'}
     name: image_1
-    properties: {}
+    properties: {source: _/theme/❀  ♪ ♬  ✧.jpeg}
+    type: Image
+  - layout_properties: {grid_position: 'UAYMBU,VMXKLM'}
+    name: image_2
+    properties: {source: _/theme/rory gilmore.jpeg}
     type: Image
   - components:
     - components:
       - layout_properties: {grid_position: 'VUZUTO,ULSIIF'}
         name: button_essay
-        properties: {role: null, text: Essay Template}
+        properties: {foreground: 'theme:On Secondary', role: null, text: 📝 Essay Template}
         type: Button
       layout_properties: {grid_position: 'JSVVNC,RTBJVL SXDROJ,FFTBLF'}
       name: outlined_card_1
-      properties: {role: outlined-card}
+      properties: {background: 'theme:On Primary Container', role: outlined-card}
       type: ColumnPanel
     - components:
       - layout_properties: {grid_position: 'MDICKC,AJXCBQ'}
         name: button_exam
-        properties: {role: null, text: Exam Prep Guide}
+        properties: {foreground: 'theme:On Primary', role: null, text: Exam Prep Guide}
         type: Button
       layout_properties: {grid_position: 'JSVVNC,RTBJVL BULTJY,RQHWXT'}
       name: outlined_card_3
-      properties: {role: outlined-card}
+      properties: {background: 'theme:On Primary Container', role: outlined-card}
       type: ColumnPanel
     - components:
       - layout_properties: {grid_position: 'JCUCCD,WBXUNS'}
         name: button_report
-        properties: {role: null, text: Report Template}
+        properties: {foreground: 'theme:On Primary', role: null, text: Report Template}
         type: Button
       layout_properties: {grid_position: 'JSVVNC,RRIEWH WTNWYV,NYDKIT'}
       name: outlined_card_2
-      properties: {role: outlined-card}
+      properties: {background: 'theme:On Primary Container', foreground: 'theme:Tertiary Container', role: outlined-card}
       type: ColumnPanel
     - components:
       - layout_properties: {grid_position: 'GCXUDG,RTDNSA'}
         name: literature
-        properties: {role: null, text: Literature Review Template}
+        properties: {foreground: 'theme:On Primary', role: null, text: Literature Review Template}
         type: Button
       layout_properties: {grid_position: 'JSVVNC,RRIEWH PPXQVM,MXTOGU'}
       name: outlined_card_4
-      properties: {role: outlined-card}
+      properties: {background: 'theme:On Primary Container', role: outlined-card}
       type: ColumnPanel
     layout_properties: {grid_position: 'JWOPJK,OKFSND'}
     name: column_panel_1
@@ -52,7 +56,7 @@ components:
   - data_bindings: []
     layout_properties: {grid_position: 'KRHZYI,IASZHI'}
     name: label_2
-    properties: {foreground: 'theme:Tertiary', role: headline, text: 'Helpful Resources 🔗 '}
+    properties: {foreground: 'theme:Secondary', role: headline, text: 'Helpful Resources 🔗 '}
     type: Label
   layout_properties: {slot: default}
   name: content_panel
