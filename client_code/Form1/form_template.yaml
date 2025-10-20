@@ -7,7 +7,11 @@ components:
       type: Label
     - layout_properties: {grid_position: 'MOAEHL,PXHKHD'}
       name: label_2
-      properties: {text: Here you can store all your upcoming anf past assignments to organise the priority and esentials details of all your assignments. You will be able to view basic statistics on upcoming tasks and this app provides you with a range of tools to help you get started on assignments and motivate you to finish what you have started. So enjoy playing with the templates and start adding your upcoming assignments down below!}
+      properties: {text: 'Build a simple command-line application that The Procrastinator tracker app is here to help students track assignments and get reminders about upcoming due dates. This solves the real problem of forgetting assignments and reduces last-minute stress. Implementing psychological features such as colour coding urgency levels for high, medium and low priority of tasks which motivate users to complete tasks and then make them feel productive and confident in their work when hitting that completed button! Other features include being able to view simple statistics on upcoming and past assignments as well as a resource page providing users with a range of tools and sites to help students get started on assignments and do their best. '}
+      type: Label
+    - layout_properties: {grid_position: 'UDCOYP,GCSSWA'}
+      name: label_6
+      properties: {role: null, text: Start your academic weapon comeback this semester by adding your upcoming assignments below!}
       type: Label
     layout_properties: {grid_position: 'HMPXWK,LICDIJ'}
     name: outlined_card_1
