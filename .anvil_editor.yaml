@@ -7,10 +7,11 @@ unique_ids:
     ❀  ♪ ♬  ✧.jpeg: '1760935281880781598141231.9703'
   forms:
     AssignmentTypeTemplates: '1760417191475707127715662.3306'
+    AssignmentTypeTemplates.EssayTemplate: '1761017600354410315771967.224'
+    AssignmentTypeTemplates.ExamTemplate: '1761017970198404340491839.0328'
+    AssignmentTypeTemplates.LiteratureReviewTemplate: '176101799325072236900606.33704'
+    AssignmentTypeTemplates.ReportTemplate: '1761017956866133850402081.31616'
     Form1: VPIK3DUBMF4MSY7IEGGM4RFG35DFFWMN
-    Form1.ItemTemplate1: '1759719093593449256530069.7659'
-    Form1.ItemTemplate4: '1760152882274323184052860.63165'
-    Form1.ItemTemplate9: '1760245311933596532378279.3834'
     ViewAllForm: '1759805338828939277701198.6174'
     ViewAllForm.RowTemplate1: '175980940499495249954407.37027'
   modules: {}

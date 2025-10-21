@@ -138,10 +138,7 @@ Keep up the great work! 🌟
     pass
 
   def button_templates_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    """Navigate to AssignmentTypeTemplates form"""
+  open_form('AssignmentTypeTemplates')
 
   
-def button_templates_click(self, **event_args):
-    """Navigate to AssignmentTypeTemplates form"""
-    open_form('AssignmentTypeTemplates')
