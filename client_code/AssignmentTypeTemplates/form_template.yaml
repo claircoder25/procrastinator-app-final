@@ -66,7 +66,7 @@ components:
     name: label_4
     properties: {font_size: 20, foreground: '#446a2f', role: title, text: 1. Grammarly - Spelling and Grammar Assistant}
     type: Label
-  - layout_properties: {grid_position: 'KMLHDM,TEIIKU'}
+  - layout_properties: {grid_position: 'ODLLWM,UOJIPS'}
     name: link_1
     properties: {foreground: '#475ae6', text: Click here to access Grammarly, url: 'https://www.grammarly.com/essay-writing?utm_source=google&utm_medium=cpc&utm_campaign=21517888528&utm_content=707415069017&utm_term=template%20for%20writing%20an%20essay&target=&targetid=kwd-314623636501&adgroup=168375295907&device=c&matchtype=b&placement=&network=g&extension=&clickid=CjwKCAjwmNLHBhA4EiwA3ts3mXFDRjARvvSmNTprUo4X822CBOS7F3nNPWGjSgH6bEWIfSxmP0TM2hoCEq8QAvD_BwE&gclsrc=aw.ds&gad_source=1&gad_campaignid=21517888528&gbraid=0AAAAADkCrf_-mpYNWrzRv2doD4oGt0Nc6&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mXFDRjARvvSmNTprUo4X822CBOS7F3nNPWGjSgH6bEWIfSxmP0TM2hoCEq8QAvD_BwE'}
     type: Link
@@ -90,15 +90,15 @@ components:
     name: label_6_copy
     properties: {font_size: 22, foreground: '#436a2f', role: title, text: '4. Quizlet - provides study tools like flashcards, games, and practice tests'}
     type: Label
-  - layout_properties: {grid_position: 'DGVMDA,VHLDNV CDIHXV,ECXQLP'}
+  - layout_properties: {grid_position: 'CDIHXV,ECXQLP'}
     name: link_4
     properties: {foreground: '#3658dd', text: Click here to access Quizlet, url: 'https://quizlet.com/au'}
     type: Link
-  - layout_properties: {grid_position: 'DGVMDA,VHLDNV HBUNNM,IGEROM'}
+  - layout_properties: {grid_position: 'HBUNNM,IGEROM'}
     name: label_7
     properties: {foreground: '#527043', role: title, text: 5. Forest - An app that helps you stay focused during a set time}
     type: Label
-  - layout_properties: {grid_position: 'DGVMDA,VHLDNV RAASXA,LDMFSX'}
+  - layout_properties: {grid_position: 'RAASXA,LDMFSX'}
     name: link_5
     properties: {foreground: '#295fdb', text: Click here to access Forest, url: 'https://www.forestapp.cc/'}
     type: Link
