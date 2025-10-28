@@ -1,5 +1,176 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - components:
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU HKRIXE,HMFQYG'}
+      name: label_2
+      properties: {foreground: 'theme:Secondary', role: title, text: 2 Weeks Before Exam}
+      type: Label
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU HWLKPR,EXHIZB'}
+      name: check_box_1
+      properties: {text: Review all notes and identify weak areas}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU VKAZGN,QMMVEU'}
+      name: check_box_1_copy
+      properties: {text: Create a study schedule}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU IKFLFQ,TKUTAP'}
+      name: check_box_1_copy_2
+      properties: {text: 'Gather all materials (textbook, notes, handouts)'}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU ARGDLJ,OCJTEU'}
+      name: check_box_1_copy_3
+      properties: {text: Make a list of topics to covereck_box_1}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU UJDHLB,KPYJDT'}
+      name: label_2_copy
+      properties: {foreground: 'theme:Secondary', role: title, text: 10 Days Before Exam}
+      type: Label
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU SZHRCD,WJCHXM'}
+      name: check_box_1_copy_4
+      properties: {text: Create summary sheets for each major topic}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU INTZJS,CXORZY'}
+      name: check_box_1_copy_5
+      properties: {text: Rewrite notes in your own words}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU OWXXCJ,UJRYAF'}
+      name: check_box_1_copy_6
+      properties: {text: Start making flashcards for key terms}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU WCRDRO,DHHUNF'}
+      name: check_box_1_copy_7
+      properties: {text: Identify topics you don't understand}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU CEBSNN,TPSGVM'}
+      name: label_2_copy_copy
+      properties: {foreground: 'theme:Secondary', role: title, text: 1 Week Before Exam}
+      type: Label
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU KQAJNS,KKDSZL'}
+      name: check_box_1_copy_8
+      properties: {text: Practice problems and past exam questions}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU OUBIFL,SGQYNE'}
+      name: check_box_1_copy_9
+      properties: {text: Quiz yourself on material}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU JKLLYM,OBOPXF'}
+      name: check_box_1_copy_10
+      properties: {text: Review flashcards daily}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU WGSKXA,VIAACZ'}
+      name: check_box_2
+      properties: {text: Form a study group (optional)}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU QJOVNK,ZIUBPB'}
+      name: label_2_copy_copy_copy
+      properties: {foreground: 'theme:Secondary', role: title, text: 3 Days Before Exam}
+      type: Label
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU PGHZWY,FZSXJI'}
+      name: check_box_2_copy_10
+      properties: {text: Take a full practice test under timed conditions}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU HNYBUR,BWCOUK'}
+      name: check_box_2_copy_12
+      properties: {text: Review summaries and notes}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU SBXCDE,CISZRU'}
+      name: check_box_2_copy_9
+      properties: {text: Focus extra time on weak areas}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU WUTVXB,JLTAKT'}
+      name: check_box_2_copy_11
+      properties: {text: Reduce study time - avoid burnout}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU KAJSWD,EDXOJU'}
+      name: label_2_copy_copy_copy_copy
+      properties: {foreground: 'theme:Secondary', role: title, text: 1 Day Before Exam}
+      type: Label
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU GJMXSN,OPOMHP'}
+      name: check_box_2_copy
+      properties: {text: Light review of main concepts only}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU MHXKCQ,MZWRTO'}
+      name: check_box_2_copy_8
+      properties: {text: Organise materials for exam day}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU GASJHP,RCUDAZ'}
+      name: check_box_2_copy_2
+      properties: {text: Get 7-9 hours of sleep}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU FDDRNQ,PRNKSC'}
+      name: check_box_2_copy_7
+      properties: {text: 'Prepare clothes, bag, calculator, pens'}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU BVXFBD,CNQKJL'}
+      name: label_2_copy_copy_copy_copy_copy
+      properties: {foreground: 'theme:Secondary', role: title, text: Day Of Exam}
+      type: Label
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU YSOOTT,QVIJPO'}
+      name: check_box_2_copy_3
+      properties: {text: Eat a nutritious breakfast}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU MMRLSR,HHZHET'}
+      name: check_box_2_copy_4
+      properties: {text: Arrive 10-15 minutes early}
+      type: CheckBox
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU GBJIZL,AGMUPZ'}
+      name: check_box_2_copy_5
+      properties: {text: Bring all required materials}
+      type: CheckBox
+    - components:
+      - layout_properties: {grid_position: 'ESPODH,ZZPWEJ'}
+        name: label_4
+        properties: {foreground: 'theme:Secondary', role: title, text: 'Effective Study Techniques:'}
+        type: Label
+      - layout_properties: {grid_position: 'VQKWQZ,LJGASW'}
+        name: label_3
+        properties:
+          role: input-prompt
+          text: |+
+            Active Recall:
+            • Test yourself without looking at notes
+            • Try to remember information from memory
+            • This is MORE effective than just reading
+
+            Spaced Repetition:
+            • Review material multiple times over several days
+            • Don't cram everything in one session
+            • Review > Wait > Review > Wait > Review
+
+            Pomodoro Technique:
+            • Study for 25 minutes focused
+            • Take a 5-minute break
+            • After 4 sessions, take a longer 15-30 minute break
+
+            Teach Someone:
+            • Explain concepts to a friend, family member, or even a pet
+            • If you can teach it, you understand it
+            • Record yourself explaining topics
+
+            Practice Problems:
+            • Do as many practice problems as possible
+            • Redo problems you got wrong
+            • Time yourself to practice speed
+
+            Mind Maps:
+            • Create visual connections between concepts
+            • Use colors and drawings
+            • Shows relationships between ideas
+
+        type: Label
+      layout_properties: {grid_position: 'RSNQWE,NRHNVP'}
+      name: outlined_card_2
+      properties: {role: outlined-card}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'RSNQWE,TBGOVU SJUXAK,DEZMTQ'}
+      name: check_box_2_copy_6
+      properties: {text: 'If feeling anxious; practice some breathing exercises like the 4-7-8 method, which involves inhaling for 4 seconds, holding for 7, and exhaling for 8'}
+      type: CheckBox
+    layout_properties: {grid_position: 'KPCHEQ,MYKEVQ'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -7,6 +178,59 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'WZMISI,POQNQR'}
+    name: outlined_button_1
+    properties: {background: '#ab8578', foreground: 'theme:On Primary Container', role: outlined-button, text: Back to Assignment Templates}
+    type: Button
+  - layout_properties: {grid_position: 'MFYLFM,OBGWYM'}
+    name: outlined_button_2
+    properties: {background: '#aa8378', foreground: 'theme:On Primary Container', role: outlined-button, text: Back to Home Page}
+    type: Button
+  - layout_properties: {grid_position: 'NHUNBW,QVBWXD'}
+    name: label_5
+    properties:
+      text: |-
+        EXAM DAY STRATEGIES:
+
+        Before You Start:
+        ✓ Read ALL instructions carefully
+        ✓ Quickly scan the entire exam
+        ✓ Budget your time (total time ÷ number of questions)
+        ✓ Note which questions are worth more points
+
+        During the Exam:
+        ✓ Answer easy questions first to build confidence
+        ✓ Skip difficult questions and come back later
+        ✓ Show your work for partial credit
+        ✓ Circle questions you're unsure about
+        ✓ Watch the time but don't panic
+    type: Label
+  - layout_properties: {grid_position: 'DLUEPE,DECFUD'}
+    name: label_6
+    properties:
+      text: |-
+        MISTAKES TO AVOID:
+
+        ❌ Cramming the night before
+        ❌ Skipping sleep to study more
+        ❌ Studying hungry or dehydrated
+        ❌ Multitasking (phone, TV, music with lyrics)
+        ❌ Only reading notes without testing yourself
+        ❌ Not asking for help when confused
+        ❌ Studying without breaks
+        ❌ Panicking during the exam
+        ❌ Changing answers without good reason
+        ❌ Leaving questions blank
+    type: Label
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {role: title, text: ✍️ Exam Guide}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

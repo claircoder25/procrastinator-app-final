@@ -78,27 +78,27 @@ components:
     - event_bindings: {click: button_view_all_click}
       layout_properties: {grid_position: 'HPYHRW,ICHCWA'}
       name: button_view_all
-      properties: {background: '#421a0b', role: filled-button, text: View All, visible: true}
+      properties: {background: '#7d4936', role: filled-button, text: View All, visible: true}
       type: Button
     - event_bindings: {click: button_templates_click}
       layout_properties: {grid_position: 'AUJVFR,BGRBRQ'}
       name: button_templates
-      properties: {background: '#421a0b', bold: false, foreground: '', role: filled-button, text: Assignment Type Templates, visible: true}
+      properties: {background: '#7d4936', bold: false, foreground: '', role: filled-button, text: Assignment Type Templates, visible: true}
       type: Button
     - event_bindings: {click: button_due_soon_click}
       layout_properties: {grid_position: 'NRMMKX,LURIAI'}
       name: button_due_soon
-      properties: {background: '#421a0b', role: filled-button, text: Due Soon}
+      properties: {background: '#7d4936', role: filled-button, text: Due Soon}
       type: Button
     - event_bindings: {click: button_weekly_view_click}
       layout_properties: {grid_position: 'YDMWFD,KBROFL'}
       name: button_weekly_view
-      properties: {background: '#421a0b', role: filled-button, text: To Do This Week}
+      properties: {background: '#7d4936', role: filled-button, text: To Do This Week}
       type: Button
     - event_bindings: {click: button_stats_click}
       layout_properties: {grid_position: 'GYCVJS,BMFWVT'}
       name: button_stats
-      properties: {background: '#421a0b', role: filled-button, text: Statistics}
+      properties: {background: '#7d4936', role: filled-button, text: Statistics}
       type: Button
     layout_properties: {grid_position: 'GRCZZX,TXWZDI'}
     name: left_nav_panel

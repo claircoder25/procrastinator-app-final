@@ -66,9 +66,9 @@ components:
     name: label_4
     properties: {font_size: 20, foreground: '#446a2f', role: title, text: 1. Grammarly - Spelling and Grammar Assistant}
     type: Label
-  - layout_properties: {grid_position: 'ODLLWM,UOJIPS'}
+  - layout_properties: {grid_position: 'ZWVIXE,GJSHEE'}
     name: link_1
-    properties: {foreground: '#475ae6', text: Click here to access Grammarly, url: 'https://www.grammarly.com/essay-writing?utm_source=google&utm_medium=cpc&utm_campaign=21517888528&utm_content=707415069017&utm_term=template%20for%20writing%20an%20essay&target=&targetid=kwd-314623636501&adgroup=168375295907&device=c&matchtype=b&placement=&network=g&extension=&clickid=CjwKCAjwmNLHBhA4EiwA3ts3mXFDRjARvvSmNTprUo4X822CBOS7F3nNPWGjSgH6bEWIfSxmP0TM2hoCEq8QAvD_BwE&gclsrc=aw.ds&gad_source=1&gad_campaignid=21517888528&gbraid=0AAAAADkCrf_-mpYNWrzRv2doD4oGt0Nc6&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mXFDRjARvvSmNTprUo4X822CBOS7F3nNPWGjSgH6bEWIfSxmP0TM2hoCEq8QAvD_BwE'}
+    properties: {background: '#88906', foreground: '#5a6a2f', text: Click here to access Grammarly, url: 'https://www.grammarly.com/essay-writing?utm_source=google&utm_medium=cpc&utm_campaign=21517888528&utm_content=707415069017&utm_term=template%20for%20writing%20an%20essay&target=&targetid=kwd-314623636501&adgroup=168375295907&device=c&matchtype=b&placement=&network=g&extension=&clickid=CjwKCAjwmNLHBhA4EiwA3ts3mXFDRjARvvSmNTprUo4X822CBOS7F3nNPWGjSgH6bEWIfSxmP0TM2hoCEq8QAvD_BwE&gclsrc=aw.ds&gad_source=1&gad_campaignid=21517888528&gbraid=0AAAAADkCrf_-mpYNWrzRv2doD4oGt0Nc6&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mXFDRjARvvSmNTprUo4X822CBOS7F3nNPWGjSgH6bEWIfSxmP0TM2hoCEq8QAvD_BwE'}
     type: Link
   - layout_properties: {grid_position: 'OIFNCF,BHBJJF'}
     name: label_5
@@ -76,7 +76,7 @@ components:
     type: Label
   - layout_properties: {grid_position: 'GPQCYT,TCDURU'}
     name: link_2
-    properties: {foreground: '#3c3acf', text: Click here to access Mybib, url: 'https://www.mybib.com/#/projects/YLaJ5k/citations'}
+    properties: {foreground: '#5a6a2f', text: Click here to access Mybib, url: 'https://www.mybib.com/#/projects/YLaJ5k/citations'}
     type: Link
   - layout_properties: {grid_position: 'TIIPXR,LDBKLW'}
     name: label_6
@@ -84,7 +84,7 @@ components:
     type: Label
   - layout_properties: {grid_position: 'DTYILV,BETPOD'}
     name: link_3
-    properties: {foreground: '#533fee', text: Click here to access Google Scholar, url: 'https://scholar.google.com/'}
+    properties: {foreground: '#5a6a2f', text: Click here to access Google Scholar, url: 'https://scholar.google.com/'}
     type: Link
   - layout_properties: {grid_position: 'WFVOMG,CQAZBU'}
     name: label_6_copy
@@ -92,7 +92,7 @@ components:
     type: Label
   - layout_properties: {grid_position: 'CDIHXV,ECXQLP'}
     name: link_4
-    properties: {foreground: '#3658dd', text: Click here to access Quizlet, url: 'https://quizlet.com/au'}
+    properties: {foreground: '#5a6a2f', text: Click here to access Quizlet, url: 'https://quizlet.com/au'}
     type: Link
   - layout_properties: {grid_position: 'HBUNNM,IGEROM'}
     name: label_7
@@ -100,7 +100,7 @@ components:
     type: Label
   - layout_properties: {grid_position: 'RAASXA,LDMFSX'}
     name: link_5
-    properties: {foreground: '#295fdb', text: Click here to access Forest, url: 'https://www.forestapp.cc/'}
+    properties: {foreground: '#5a6a2f', text: Click here to access Forest, url: 'https://www.forestapp.cc/'}
     type: Link
   layout_properties: {slot: default}
   name: content_panel

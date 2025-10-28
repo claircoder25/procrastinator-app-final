@@ -1,5 +1,55 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'CGNQCP,KPDMVK'}
+    name: label_2
+    properties: {background: '', foreground: 'theme:On Primary Container', role: title, text: 'Below is a standard template for a lab report '}
+    type: Label
+  - layout_properties: {grid_position: 'ULLIGF,UMEOWB'}
+    name: link_1
+    properties: {text: 'Adapted from Bhandari, P. (2021, May 20). How to write a lab report. Scribbr. https://www.scribbr.com/academic-writing/lab-report/', url: 'https://www.scribbr.com/academic-writing/lab-report/#:~:text=Title:%20expresses%20the%20topic%20of,materials%2C%20procedures%2C%20tables%20or%20figures'}
+    type: Link
+  - components:
+    - layout_properties: {grid_position: 'FCTCOF,RSZBGY'}
+      name: text_box_1
+      properties: {placeholder: 'Title Page: your name, date, subject and expresses the topic of your study', text: ''}
+      type: TextBox
+    - layout_properties: {grid_position: 'YXGXKC,NLZCHW'}
+      name: text_box_2
+      properties: {placeholder: 'Abstract summarises your research aims, methods, results, and conclusions'}
+      type: TextBox
+    - layout_properties: {grid_position: 'TDMZGL,MZEQNJ'}
+      name: text_box_3
+      properties: {placeholder: 'Introduction: establishes the context needed to understand the topic'}
+      type: TextBox
+    - layout_properties: {grid_position: 'ZOHONX,VZCVKY'}
+      name: text_box_4
+      properties: {placeholder: 'Methods and Material: describes the materials and procedures used in the experiment'}
+      type: TextBox
+    - layout_properties: {grid_position: 'IPKPAW,STTIKZ'}
+      name: text_box_5
+      properties: {placeholder: 'Results: reports all descriptive and inferential statistical analyses'}
+      type: TextBox
+    - layout_properties: {grid_position: 'SHHWQK,UFZTUM'}
+      name: text_box_6
+      properties: {placeholder: 'Discussion: interprets and evaluates results and identifies limitations'}
+      type: TextBox
+    - layout_properties: {grid_position: 'HONKDD,LHYIIW'}
+      name: text_box_7
+      properties: {placeholder: 'Conclusion: sums up the main findings of your experiment'}
+      type: TextBox
+    - layout_properties: {grid_position: 'DYWPYQ,LTAJYI'}
+      name: text_box_8
+      properties: {placeholder: 'Reference List: list of all sources cited using a specific style (e.g. APA)'}
+      type: TextBox
+    - layout_properties: {grid_position: 'RDBABN,WXTMOF'}
+      name: text_box_9
+      properties: {placeholder: 'Appendix:: contains lengthy materials, procedures, tables or figures'}
+      type: TextBox
+    layout_properties: {grid_position: 'WUCEZM,WAEROD'}
+    name: outlined_card_1
+    properties: {background: '#889063', role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -7,6 +57,37 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'LYXHXO,VUQSIC'}
+    name: button_1
+    properties: {background: '#889063', foreground: 'theme:Tertiary Container', role: outlined-button, text: Back to Assignment Templates}
+    type: Button
+  - layout_properties: {grid_position: 'ILGLZH,OHCMRY'}
+    name: outlined_button_1
+    properties: {background: '#889063', foreground: 'theme:Tertiary Container', role: outlined-button, text: Back to Home Page}
+    type: Button
+  - layout_properties: {grid_position: 'TKMUTS,JAWHYW'}
+    name: label_3
+    properties:
+      text: |-
+        FORMATTING TIPS:
+        ✓ Use clear headings and subheadings
+        ✓ Number your pages
+        ✓ Use consistent font and spacing
+        ✓ Include page numbers in Table of Contents
+        ✓ Keep formal, academic tone throughout
+        ✓ Cite sources throughout using in-text citations
+        ✓ Use present tense for established facts
+        ✓ Use past tense for your research process
+    type: Label
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: 📊 Report Template}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

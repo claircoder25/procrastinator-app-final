@@ -1,5 +1,10 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'SWFIXS,EDONPH'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -7,7 +12,24 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'ZSFEJH,PNHIWQ'}
+    name: outlined_button_1
+    properties: {background: '#f5d6d6', foreground: '#5b1a06', role: outlined-button, text: Back to Assignment Templates}
+    type: Button
+  - layout_properties: {grid_position: 'ENTWKF,VIXVEQ'}
+    name: outlined_button_2
+    properties: {background: '#f5d6d6', foreground: '#621a04', role: outlined-button, text: Back to Home Page}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: 📖 Literature Review Template}
+  type: Label
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {background: '', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
