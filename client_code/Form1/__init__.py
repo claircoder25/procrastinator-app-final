@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 class Form1(Form1Template):
   def __init__(self, **properties):
     # This runs when the form first loads
-    # Initialize all components
+    # Initialise all components
     self.init_components(**properties)
 
   def button_add_click(self, **event_args):

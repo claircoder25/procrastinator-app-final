@@ -11,3 +11,15 @@ class EssayTemplate(EssayTemplateTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+  def button_back_click(self, **event_args):
+    """Go back to templates page"""
+  open_form('AssignmentTypeTemplates')
+
+  def button_home_click(self, **event_args):
+    """Go back to Form1 page"""
+  open_form('Form1')

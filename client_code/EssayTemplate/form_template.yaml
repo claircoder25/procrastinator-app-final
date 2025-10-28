@@ -1,17 +1,126 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'DWITWK,ARAOLM'}
-    name: image_1
-    properties: {height: 289.87890625, source: _/theme/essay_structure.jpg}
-    type: Image
+  - event_bindings: {click: link_1_click}
+    layout_properties: {grid_position: 'HCNKWG,BIHJED'}
+    name: link_1
+    properties: {spacing_above: none, text: 'NOTE:  The following Information is sourced from UTS:HELPS                                                                                            Essay writing: structure. (n.d.). Retrieved October 28, 2025, from https://www.uts.edu.au/globalassets/sites/default/files/essay-structure.pdf'}
+    type: Link
   - components:
-    - layout_properties: {full_width_row: false, grid_position: 'NMZUFY,SHDAOU', row_background: 'theme:Secondary'}
-      name: text_box_1
-      properties: {align: center, text: Introduction}
-      type: TextBox
-    layout_properties: {grid_position: 'BMMMPO,YDHVGI'}
-    name: outlined_card_1
-    properties: {role: outlined-card}
+    - components:
+      - layout_properties: {full_width_row: false, grid_position: 'VJAFYU,SFLDLC'}
+        name: text_box_1
+        properties: {align: center, background: 'theme:Secondary', font: '', foreground: 'theme:Surface Variant', placeholder: '', text: Introduction}
+        type: TextBox
+      - layout_properties: {grid_position: 'JZXPDM,ZNOVKD'}
+        name: label_2
+        properties: {align: center, background: 'theme:Secondary', foreground: 'theme:Primary Container', text: Body}
+        type: Label
+      - layout_properties: {grid_position: 'PUVMAG,PBZLQN'}
+        name: text_box_4
+        properties: {placeholder: Paragraph 1}
+        type: TextBox
+      - layout_properties: {grid_position: 'FYHRDP,DFYDGQ'}
+        name: text_box_2
+        properties: {placeholder: Paragraph 2}
+        type: TextBox
+      - layout_properties: {grid_position: 'NTWPYK,TCKNUG'}
+        name: text_box_3
+        properties: {placeholder: Paragraph 3}
+        type: TextBox
+      - layout_properties: {grid_position: 'OZSYJP,OUDVRO'}
+        name: text_box_5
+        properties: {align: center, background: 'theme:Secondary', foreground: 'theme:Primary Container', placeholder: '', text: Conclusion}
+        type: TextBox
+      - layout_properties: {grid_position: 'WMFOOZ,ZDTRJV'}
+        name: text_box_6
+        properties: {align: center, background: 'theme:Secondary', foreground: 'theme:Primary Container', text: Reference List}
+        type: TextBox
+      layout_properties: {grid_position: 'UJEXGV,QUYVTW'}
+      name: outlined_card_1
+      properties: {background: 'theme:On Secondary Container', foreground: 'theme:On Secondary Container', role: outlined-card}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'VZEDHZ,DVFXEO'}
+    name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'WAGXNA,SASPZN'}
+      name: label_4
+      properties: {background: '#e1b2b4', foreground: '#592613', role: title, spacing_below: none, text: 'Introduction:'}
+      type: Label
+    - layout_properties: {grid_position: 'YJLWYW,BKHVXL'}
+      name: label_3
+      properties:
+        background: '#e1b2b4'
+        foreground: '#592613'
+        role: input-prompt
+        text: |
+          • An introduction is a preview of the assignment.
+          • It makes a general statement about the issue, topic or area under discussion.
+          • It sets out the main structure of the assignment.
+          • It sets out your thesis (i.e. point of view).
+      type: Label
+    - layout_properties: {grid_position: 'MUDXYO,MCKLIK'}
+      name: label_5
+      properties: {foreground: '#592613', role: title, text: 'Body:'}
+      type: Label
+    - layout_properties: {grid_position: 'RSPLRB,AOMGNV'}
+      name: label_6
+      properties:
+        foreground: '#592613'
+        role: input-prompt
+        text: |-
+          • This is where you assemble the evidence of your research and thinking.
+          • It is here that the bulk of the marks lies.
+          • You will be assessed on the development and relevance of your information, and any
+          discussion based on that information.
+          • Your research should be carefully acknowledged with in-text referencing.
+          • If the assignment question has more than one part, structure your body into sections
+          that deal with each part of the assignment question.
+      type: Label
+    - layout_properties: {grid_position: 'KRZYCE,HEPXVU'}
+      name: label_7
+      properties: {foreground: '#45250d', role: title, text: Conclusion}
+      type: Label
+    - layout_properties: {grid_position: 'NNBACG,XHLNYD'}
+      name: label_8
+      properties:
+        foreground: '#45250d'
+        role: input-prompt
+        text: |-
+          • A conclusion is a review of the assignment.
+          • It sums up the arguments of the whole text.
+          • It makes reference to the key terms of the assignment question.
+          • It reiterates and confirms your thesis.
+          • It may suggest recommendations, or indicate the significance or implications that
+          follow from the conclusion.
+          • There should be no new information in the conclusion.
+          • If you have added something not mentioned in the body, check that it is relevant; if
+          so, include it as a paragraph in the body.
+      type: Label
+    - layout_properties: {grid_position: 'PRHPNM,UJXGTO'}
+      name: label_9
+      properties: {background: '#e1b2b4', foreground: '#45250d', role: title, text: 'Reference List:'}
+      type: Label
+    - layout_properties: {grid_position: 'EDWFJC,LSQUWJ'}
+      name: label_10
+      properties:
+        foreground: '#45250d'
+        role: input-prompt
+        text: |-
+          • Demonstrates that you have researched the area.
+          • Demonstrates that you are enlisting the support of someone’s research to support
+          your own ideas
+          • Demonstrates what ideas or information you have referred to from someone’s
+          research as distinct from your own.
+          • Demonstrates that you acknowledge and give credit to the work of someone else.
+          • Make sure that you are familiar with the referencing style as prescribed by your faculty.
+          • Only include those references that you have used in your assignment (i.e. those that
+          you have cited in your assignment).
+      type: Label
+    layout_properties: {grid_position: 'KJHTFG,NMLKTB'}
+    name: column_panel_3
+    properties: {background: '#e1b2b4'}
     type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel
@@ -26,14 +135,42 @@ components:
   properties: {foreground: '#4C3D19', role: title, text: 📝 Essay Template}
   type: Label
 - components:
-  - layout_properties: {grid_position: 'ENYJLT,RXLRSS'}
-    name: outlined_button_1
+  - event_bindings: {click: button_back_click}
+    layout_properties: {grid_position: 'ENYJLT,RXLRSS'}
+    name: button_back
     properties: {background: '#889063', foreground: 'theme:Tertiary Container', role: outlined-button, text: Back to Assignment Templates}
     type: Button
-  - layout_properties: {grid_position: 'JBOJLI,FAVCRY'}
-    name: outlined_button_2
+  - event_bindings: {click: button_home_click}
+    layout_properties: {grid_position: 'JBOJLI,FAVCRY'}
+    name: button_home
     properties: {background: '#889063', foreground: 'theme:Tertiary Container', role: outlined-button, text: Back to Home Page}
     type: Button
+  - layout_properties: {grid_position: 'QSSSRX,GBVURV'}
+    name: label_11
+    properties: {foreground: '#441b0d', role: title, text: Do's and Don'ts}
+    type: Label
+  - layout_properties: {grid_position: 'DVWOZE,TOQSCU'}
+    name: label_12
+    properties:
+      foreground: '#441b0d'
+      text: |-
+        ✓ Start each paragraph with a clear topic sentence
+        ✓ End each paragraph with a transition to the next idea
+        ✓ Use specific examples and evidence, not general statements
+        ✓ Explain HOW your evidence supports your argument
+    type: Label
+  - layout_properties: {grid_position: 'JSERKM,FOYVXD'}
+    name: label_13
+    properties:
+      foreground: '#441b0d'
+      text: |-
+        ❌ Starting sentences with "I think" or "In my opinion"
+        ❌ Using contractions (don't, can't, won't)
+        ❌ Being too vague or general
+        ❌ Forgetting to cite sources
+        ❌ Making your introduction or conclusion too long
+        ❌ Going off-topic from your thesis
+    type: Label
   layout_properties: {slot: left-nav}
   name: column_panel_1
   properties: {background: '', spacing_below: none, wrap_on: mobile}
