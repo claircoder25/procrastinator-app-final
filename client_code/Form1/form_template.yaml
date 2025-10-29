@@ -90,11 +90,6 @@ components:
       name: button_due_soon
       properties: {background: '#7d4936', role: filled-button, text: Due Soon}
       type: Button
-    - event_bindings: {click: button_weekly_view_click}
-      layout_properties: {grid_position: 'YDMWFD,KBROFL'}
-      name: button_weekly_view
-      properties: {background: '#7d4936', role: filled-button, text: To Do This Week}
-      type: Button
     - event_bindings: {click: button_stats_click}
       layout_properties: {grid_position: 'GYCVJS,BMFWVT'}
       name: button_stats
