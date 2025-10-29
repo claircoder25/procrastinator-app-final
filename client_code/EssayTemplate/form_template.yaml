@@ -1,11 +1,20 @@
 components:
 - components:
-  - event_bindings: {click: link_1_click}
-    layout_properties: {grid_position: 'HCNKWG,BIHJED'}
-    name: link_1
-    properties: {spacing_above: none, text: 'NOTE:  The following Information is sourced from UTS:HELPS                                                                                            Essay writing: structure. (n.d.). Retrieved October 28, 2025, from https://www.uts.edu.au/globalassets/sites/default/files/essay-structure.pdf'}
-    type: Link
   - components:
+    - components:
+      - layout_properties: {grid_position: 'OFCYTR,TEZWZH'}
+        name: label_16
+        properties:
+          text: |-
+            Help! Why do I leave my assignments until the last minute? (2024, August 5). Open.edu.au. https://www.open.edu.au/advice/insights/why-leave-assignments-last-minute
+
+            Procrastination and Time Management. (2025). Intranet. https://i.unisa.edu.au/students/student-support-services/wellbeing-at-unisa/academic-wellbeing/procrastination-and-time-management/
+        type: Label
+      event_bindings: {click: link_1_click}
+      layout_properties: {grid_position: 'LMUNJJ,TYNZKJ'}
+      name: link_1
+      properties: {spacing_above: none, text: 'NOTE:  The following Information is sourced from UTS:HELPS                                                                                            Essay writing: structure. (n.d.). Retrieved October 28, 2025, from https://www.uts.edu.au/globalassets/sites/default/files/essay-structure.pdf'}
+      type: Link
     - components:
       - layout_properties: {full_width_row: false, grid_position: 'VJAFYU,SFLDLC'}
         name: text_box_1
@@ -69,6 +78,7 @@ components:
       properties:
         foreground: '#592613'
         role: input-prompt
+        spacing_above: none
         text: |-
           • This is where you assemble the evidence of your research and thinking.
           • It is here that the bulk of the marks lies.
@@ -170,6 +180,22 @@ components:
         ❌ Forgetting to cite sources
         ❌ Making your introduction or conclusion too long
         ❌ Going off-topic from your thesis
+    type: Label
+  - layout_properties: {grid_position: 'TSBFPU,XHMNRP'}
+    name: label_14
+    properties: {role: title, text: Take Care of Yourself!}
+    type: Label
+  - layout_properties: {grid_position: 'OIYRTW,YZCCIK'}
+    name: label_15
+    properties:
+      spacing_above: none
+      text: |-
+        • Break large assignments into smaller tasks
+        • Set realistic goals
+        • Create a distraction-free, calming study environment
+        • Forgive yourself: Don't dwell on past procrastination, focus on making a plan for the present.
+        • Reward yourself: Plan a fun activity to do after you complete a task to give yourself something to look forward to.
+        • Start small: If you're struggling to begin, commit to just five minutes. You'll often find that you continue working once you've started.
     type: Label
   layout_properties: {slot: left-nav}
   name: column_panel_1
