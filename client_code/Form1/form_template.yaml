@@ -36,7 +36,7 @@ components:
       type: DatePicker
     - layout_properties: {grid_position: 'KWLOMQ,HNLRZT RQHYJL,XZNSYM'}
       name: label_3
-      properties: {background: 'theme:Surface Variant', text: 'Select Priority, High, Medium, Low:'}
+      properties: {background: 'theme:Surface Variant', text: 'Select Priority; High, Medium, Low:'}
       type: Label
     - layout_properties: {grid_position: 'KWLOMQ,HNLRZT VKCEVE,GBALZJ'}
       name: label_4

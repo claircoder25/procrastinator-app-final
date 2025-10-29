@@ -54,27 +54,41 @@ class Form1(Form1Template):
     # Make sure 'ViewAllForm' exactly matches the form name in your App Browser
     open_form('ViewAllForm')
 
-  def button_due_soon_click(self, **event_args):
-    """Navigate to Due Soon view"""
-    # Open the DueSoonForm by name
-    # Only works if you've created a DueSoonForm
-    # If you haven't created this form yet, you can comment out this function
-    # or create the form
-    try:
-      open_form('DueSoonForm')
-    finally:
-      # If DueSoonForm doesn't exist, show message
-      alert("Due Soon view coming soon! For now, use View All to see your assignments.")
+  def button_templates_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
 
-  def button_weekly_view_click(self, **event_args):
-    """Navigate to Weekly view"""
-    # Open the WeeklyViewForm by name
-    # Only works if you've created a WeeklyViewForm
-    try:
-      open_form('WeeklyViewForm')
-    finally:
-      # If WeeklyViewForm doesn't exist, show message
-      alert("Weekly view coming soon! For now, use View All to see your assignments.")
+  def button_due_soon_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def button_stats_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+def button_templates_click(self, **event_args):
+  """Navigate to AssignmentTypeTemplates form"""
+  open_form('AssignmentTypeTemplates')
+
+def button_due_soon_click(self, **event_args):
+  """Show only assignments due in the next 3 days"""
+
+  # Get today's date (without time)
+  today = datetime.now().date()
+
+  # Calculate the date 3 days from now
+  three_days = today + timedelta(days=3)
+
+  # Search for assignments that are:
+  # 1. Not completed yet (completed=False)
+  # 2. Due between today and 3 days from now (q.between)
+  due_soon = app_tables.assignments.search(
+    completed=False,
+    due_date=q.between(today, three_days)
+  )
+
+  # Sort the results by due date (earliest first)
+  due_soon = sorted(due_soon, key=lambda x: x['due_date'] if x['due_date'] else datetime.max.date())
 
   def button_stats_click(self, **event_args):
     """Calculate and display statistics about assignments"""
@@ -126,19 +140,14 @@ class Form1(Form1Template):
     
 Total Assignments: {total}
 Completed: {completed} ✅
-Pending: {pending} 📝
+Pending: {pending} 
 Completion Rate: {completion_rate:.1f}%
 Average Time to Complete: {avg_days:.1f} days
 
-Keep up the great work! 🌟
+Keep up the great work! 
 """)
 
-  def features_menu_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
 
-  def button_templates_click(self, **event_args):
-    """Navigate to AssignmentTypeTemplates form"""
-  open_form('AssignmentTypeTemplates')
+ 
 
   

@@ -114,11 +114,15 @@ components:
   name: label_1
   properties: {text: 📚 Assignment Templates & Resources}
   type: Label
-- event_bindings: {click: button_back_click}
+- components:
+  - layout_properties: {grid_position: 'QZCKRY,WFGVDA'}
+    name: button_back
+    properties: {role: outlined-button, text: Back to Home Page}
+    type: Button
   layout_properties: {slot: left-nav}
-  name: button_back
-  properties: {role: elevated-button, text: ← Back To Home}
-  type: Button
+  name: column_panel_2
+  properties: {}
+  type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

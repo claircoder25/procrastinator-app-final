@@ -1,6 +1,122 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'SWFIXS,EDONPH'}
+  - layout_properties: {grid_position: 'FEBUSX,DDWHVA'}
+    name: link_1
+    properties: {text: 'Adapted from the following source: University of Technology Sydney. (2018). Literature reviews. Uts.edu.au. https://www.uts.edu.au/for-students/current-students/support/helps/self-help-resources/types-assignments/literature-reviews', url: 'https://utsd8.prod.acquia-sites.com/sites/default/files/article/downloads/literature-review-writing.pdf'}
+    type: Link
+  - components:
+    - layout_properties: {grid_position: 'QGWNRI,ZUEMRH'}
+      name: label_3
+      properties: {align: center, font_size: 37, foreground: 'theme:On Surface Variant', role: title, text: 'Structure Template '}
+      type: Label
+    - layout_properties: {grid_position: 'XUYUUQ,WGSRFJ'}
+      name: label_4
+      properties: {role: title, text: Introduction}
+      type: Label
+    - layout_properties: {grid_position: 'YNRDFJ,GCBFSY'}
+      name: label_8
+      properties:
+        text: |-
+          • State the topic you're reviewing
+          • Explain the scope (what you'll cover)
+          • Explain the boundaries (what you won't cover)
+          • Describe how the review is organized
+          • State your research question or purpose
+      type: Label
+    - layout_properties: {grid_position: 'RMRDJP,GWPJTL'}
+      name: label_9
+      properties: {role: title, text: Body (Organised by themes or topics)}
+      type: Label
+    - layout_properties: {grid_position: 'ZNRJSK,DJQDVG'}
+      name: label_10
+      properties:
+        text: |-
+          Section 1: [Key Concept/Theme]
+          • Discuss relevant research on this topic
+          • Summarise key findings from multiple sources
+          • Compare and evaluate different perspectives
+          • Identify agreements and disagreements among researchers
+          • End with: How does this relate to your research focus?
+
+          Section 2: [Key Concept/Theme]
+          • (Repeat same structure)
+
+          Section 3: [Key Concept/Theme]
+          • (Repeat same structure)
+
+          Each section should:
+          • Focus on ONE key concept or theme
+          • Discuss and evaluate the literature critically
+          • Show logical progression of ideas
+          • Connect back to your research area
+      type: Label
+    - layout_properties: {grid_position: 'WHZEFT,TBLZBX'}
+      name: label_11
+      properties: {role: title, text: Conclusion}
+      type: Label
+    - layout_properties: {grid_position: 'MIEIUQ,GYZDLN'}
+      name: label_12
+      properties:
+        text: |-
+          • Summarise the most important points from each section
+          • Identify gaps in current research
+          • Explain how your research will address these gaps
+          • Connect the literature to your research methodology
+          • State the significance and value of your proposed research
+      type: Label
+    layout_properties: {grid_position: 'OMOHCZ,CDWSBJ'}
+    name: outlined_card_2
+    properties: {background: '#f5d6d6', role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'YFXKAS,BVXDRM'}
+      name: label_6
+      properties: {foreground: '#602716', role: title, text: Writing Tips}
+      type: Label
+    - layout_properties: {grid_position: 'JJSGVQ,XPVFZA'}
+      name: label_7
+      properties:
+        text: |
+          Critical Analysis:
+          ✓ Don't just summarise - analyse and evaluate
+          ✓ Compare different researchers' findings
+          ✓ Identify strengths and limitations of existing research
+          ✓ Show relationships between sources
+          ✓ Demonstrate logical progression of ideas
+
+          Focus and Emphasis:
+          ✓ Keep the reader focused on your research rationale
+          ✓ Emphasise the significance of your work
+          ✓ Highlight key issues relevant to your topic
+          ✓ Show how your work creates new knowledge
+
+          Academic Skills to Demonstrate:
+          ✓ Summarising and paraphrasing
+          ✓ Synthesis of multiple sources
+          ✓ Critical analysis and evaluation
+          ✓ Proper citation and in-text referencing
+          ✓ Clear, logical structure
+          ✓ Professional writing style
+
+          Structure Elements:
+          ✓ Use clear topic sentences
+          ✓ Link sections logically
+          ✓ Use transitions between paragraphs
+          ✓ End each section with a summary
+          ✓ Maintain focus on your research question
+
+          COMMON MISTAKES TO AVOID
+
+          ❌ Just listing or summarising sources without analysis
+          ❌ Including irrelevant research
+          ❌ Failing to identify research gaps
+          ❌ Not connecting literature to your research
+          ❌ Poor organisation without clear themes
+          ❌ Not evaluating sources critically
+          ❌ Weak or missing connections between sections
+          ❌ No clear argument about your research's value
+      type: Label
+    layout_properties: {grid_position: ''}
     name: outlined_card_1
     properties: {role: outlined-card}
     type: ColumnPanel
@@ -14,13 +130,36 @@ components:
   type: FlowPanel
 - components:
   - layout_properties: {grid_position: 'ZSFEJH,PNHIWQ'}
-    name: outlined_button_1
+    name: button_back
     properties: {background: '#f5d6d6', foreground: '#5b1a06', role: outlined-button, text: Back to Assignment Templates}
     type: Button
   - layout_properties: {grid_position: 'ENTWKF,VIXVEQ'}
-    name: outlined_button_2
+    name: button_home
     properties: {background: '#f5d6d6', foreground: '#621a04', role: outlined-button, text: Back to Home Page}
     type: Button
+  - components:
+    - layout_properties: {grid_position: 'JCKAXM,XJEONI'}
+      name: label_5
+      properties: {foreground: '#5b1a05', role: title, text: 'Purpose of a Literature Review:'}
+      type: Label
+    - layout_properties: {grid_position: 'ROASZH,XOVGSF'}
+      name: label_2
+      properties:
+        text: |+
+          The literature review guides your research by:
+          ✓ Understanding key concepts, theories, and practices in your field
+          ✓ Identifying main issues, problems, and debates
+          ✓ Establishing current state of knowledge
+          ✓ Finding gaps in existing research
+          ✓ Showing how your work builds on or differs from previous work
+          ✓ Establishing the significance of your research
+          ✓ Refining your research question
+
+      type: Label
+    layout_properties: {grid_position: 'BEALFU,OQTCVF'}
+    name: column_panel_2
+    properties: {}
+    type: ColumnPanel
   layout_properties: {slot: left-nav}
   name: column_panel_1
   properties: {}

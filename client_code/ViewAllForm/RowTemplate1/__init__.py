@@ -12,7 +12,7 @@ class RowTemplate1(RowTemplate1Template):
     # Set Form properties and Data Bindings
     self.init_components(**properties)
 
-    # Set the background color based on the assignment's priority level
+    # Set the background colour based on the assignment's priority level
     # Wrap in try/except to handle any missing components gracefully
     try:
       self.set_priority_color()

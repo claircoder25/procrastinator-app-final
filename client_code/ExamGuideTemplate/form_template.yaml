@@ -1,6 +1,15 @@
 components:
 - components:
   - components:
+    - layout_properties: {grid_position: 'XAGUJB,LPDGON'}
+      name: link_2
+      properties: {col_spacing: small, text: 'University of St. Augustine. (2025, January 14). 10 Effective Study Techniques to Try This Year. University of St. Augustine for Health Sciences. https://www.usa.edu/blog/study-techniques/', url: 'https://www.usa.edu/blog/study-techniques/'}
+      type: Link
+    layout_properties: {grid_position: 'BGLBPZ,HRVQCB'}
+    name: link_1
+    properties: {col_spacing: small, text: 'The following text was informed by: writer, staff. (2012, November). Top Universities. Top Universities. https://www.topuniversities.com/student-info/health-and-support/exam-preparation-ten-study-tips', url: 'https://www.topuniversities.com/student-info/health-and-support/exam-preparation-ten-study-tips'}
+    type: Link
+  - components:
     - layout_properties: {grid_position: 'RSNQWE,TBGOVU HKRIXE,HMFQYG'}
       name: label_2
       properties: {foreground: 'theme:Secondary', role: title, text: 2 Weeks Before Exam}
@@ -180,7 +189,7 @@ components:
   type: FlowPanel
 - components:
   - layout_properties: {grid_position: 'WZMISI,POQNQR'}
-    name: outlined_button_1
+    name: button_back
     properties: {background: '#ab8578', foreground: 'theme:On Primary Container', role: outlined-button, text: Back to Assignment Templates}
     type: Button
   - layout_properties: {grid_position: 'MFYLFM,OBGWYM'}
@@ -229,7 +238,7 @@ components:
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: label_1
-  properties: {role: title, text: ✍️ Exam Guide}
+  properties: {role: title, text: ✍️ Exam Study Guide}
   type: Label
 container:
   properties: {html: '@theme:standard-page.html'}

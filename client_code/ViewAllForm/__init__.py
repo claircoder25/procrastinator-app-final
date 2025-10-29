@@ -5,7 +5,7 @@ from datetime import datetime
 
 class ViewAllForm(ViewAllFormTemplate):
   def __init__(self, **properties):
-    # Initialize the form
+    # Initialise the form
     self.init_components(**properties)
 
     # Load all assignments when form opens
