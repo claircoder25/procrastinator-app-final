@@ -45,7 +45,7 @@ class Form1(Form1Template):
     self.text_box_subject.text = ""
     self.date_picker_due.date = None
 
-    # Show success message
+    # Show success message when add assignment button is clicked 
     alert("Assignment added successfully! 🎉")
 
   def button_view_all_click(self, **event_args):
@@ -54,6 +54,7 @@ class Form1(Form1Template):
     # Make sure 'ViewAllForm' exactly matches the form name in your App Browser
     open_form('ViewAllForm')
 
+# When this button is clicked go to Assignment Type Template page
   def button_templates_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
@@ -65,11 +66,14 @@ class Form1(Form1Template):
   def button_stats_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
-
+   
 def button_templates_click(self, **event_args):
   """Navigate to AssignmentTypeTemplates form"""
   open_form('AssignmentTypeTemplates')
 
+
+  
+# When this button is clicked it shows the assignments due in the next 1-3 days
 def button_due_soon_click(self, **event_args):
   """Show only assignments due in the next 3 days"""
 

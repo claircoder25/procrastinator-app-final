@@ -131,3 +131,11 @@ class RowTemplate1(RowTemplate1Template):
 
       # Remove this assignment from the display
       self.remove_from_parent()
+
+  def button_add_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def create_new_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
