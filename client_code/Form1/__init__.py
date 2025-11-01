@@ -1,4 +1,3 @@
-
 from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.tables as tables
@@ -10,7 +9,7 @@ import random
 class Form1(Form1Template):
   def __init__(self, **properties):
     # This runs when the form first loads
-    # Initialize all components
+    # Initialise all components
     self.init_components(**properties)
 
   def button_add_click(self, **event_args):
@@ -22,6 +21,9 @@ class Form1(Form1Template):
     due_date = self.date_picker_due.date
     priority = self.drop_down_priority.selected_value
     assignment_type = self.drop_down_type.selected_value
+
+  if due_date:
+    due_date = datetime.combine(due_date, datetime.min.time())
 
     # Validate inputs - make sure user filled in the required fields
     # 'not name' means "if name is empty"
@@ -149,19 +151,19 @@ class Form1(Form1Template):
     else:
       completion_rate = 0
 
-    #Count by priority
+    # FIXED: Count by priority
     high_priority = len([a for a in all_assignments if a['priority'] == 'High'])
     medium_priority = len([a for a in all_assignments if a['priority'] == 'Medium'])
     low_priority = len([a for a in all_assignments if a['priority'] == 'Low'])
 
-    #Count by assignment type
+    # FIXED: Count by assignment type
     types_count = {}
     for assignment in all_assignments:
       atype = assignment['assignment_type']
       if atype:
         types_count[atype] = types_count.get(atype, 0) + 1
 
-    #Calculate average time to complete assignments
+    # Calculate average time to complete assignments
     completed_assignments = [a for a in all_assignments if a['completed']]
 
     total_days = 0
@@ -172,26 +174,63 @@ class Form1(Form1Template):
         days = (assignment['date_completed'] - assignment['date_created']).days
         total_days += days
         count += 1
-    
+
     if count > 0:
       avg_days = total_days / count
     else:
       avg_days = 0
-    
+
     # FIXED: Build comprehensive statistics message
     stats = f"""📊 Assignment Statistics:
     
-Total Assignments: {total}
-Completed: {completed}
-Pending: {pending}
-Completion Rate: {completion_rate:.1f}%
+📚 Total Assignments: {total}
+✅ Completed: {completed}
+⏳ Pending: {pending}
+📈 Completion Rate: {completion_rate:.1f}%
 
 Priority Breakdown:
 🔴 High: {high_priority}
 🟡 Medium: {medium_priority}
 🟢 Low: {low_priority}
 """
-    
-  def button_assignment_templates_click(self, **event_args):
-    """Navigate to Assignment Type Templates"""
+
+    # Add assignment types if any exist
+    if types_count:
+      stats += "\nAssignment Types:\n"
+      for atype, count in sorted(types_count.items()):
+        stats += f"  • {atype}: {count}\n"
+
+    # Add average completion time if available
+    if avg_days > 0:
+      stats += f"\n⏱️ Average Time to Complete: {avg_days:.1f} days"
+
+    stats += "\n\nKeep up the great work! 🌟"
+
+    # Show statistics
+    alert(stats, title="Your Progress")
+
+  #when button is clicked Assignment type template is opened
+  def button_templates_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
     open_form('AssignmentTypeTemplates')
+
+  def text_box_name_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def text_box_subject_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def date_picker_due_change(self, **event_args):
+    """This method is called when the selected date changes"""
+    pass
+
+  def drop_down_priority_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
+
+  def drop_down_type_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
