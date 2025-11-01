@@ -12,66 +12,84 @@ class Form1(Form1Template):
     # Initialise all components
     self.init_components(**properties)
 
+  def button_view_all_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('ViewAllForm')
+
+  def button_templates_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('AssignmentTypeTemplates')
+
+  def button_due_soon_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
   def button_add_click(self, **event_args):
-    """This runs when the 'Add Assignment' button is clicked"""
+    """This method is called when the button is clicked"""
+    pass
 
-    # Get the values that the user typed into each input field
-    name = self.text_box_name.text
-    subject = self.text_box_subject.text
-    due_date = self.date_picker_due.date
-    priority = self.drop_down_priority.selected_value
-    assignment_type = self.drop_down_type.selected_value
+def button_add_click(self, **event_args):
+  """This runs when the 'Add Assignment' button is clicked"""
 
-  if due_date:
-    due_date = datetime.combine(due_date, datetime.min.time())
+  # Get the values that the user typed into each input field
+  assignment_name = self.text_box_name.text
+  assignment_subject = self.text_box_subject.text
+  assignment_due_date = self.date_picker_due.date
+  assignment_priority = self.drop_down_priority.selected_value
+  assignment_type = self.drop_down_type.selected_value
 
-    # Validate inputs - make sure user filled in the required fields
-    # 'not name' means "if name is empty"
-    if not name or not subject or not due_date:
-      # Show an error message popup if any required field is empty
-      alert("⚠️ Please fill in all required fields!")
-      return  # Stop the function here, don't add the assignment
+  # FIX: Convert date to datetime by adding time (midnight)
+  if assignment_due_date:
+    assignment_due_date = datetime.combine(assignment_due_date, datetime.min.time())
 
-    # Set defaults if dropdowns weren't selected
-    if not priority:
-      priority = "High"
-    if not assignment_type:
-      assignment_type = "Essay"
+  # Validate inputs
+  if not assignment_name or not assignment_subject or not assignment_due_date:
+    alert("⚠️ Please fill in all required fields!")
+    return  # Stop here if validation fails
 
-    # Add a new row to the 'assignments' table in the database
-    # This saves the assignment permanently
-    app_tables.assignments.add_row(
-      name=name,                      # Assignment name
-      subject=subject,                # Subject/class
-      due_date=due_date,             # When it's due
-      priority=priority,             # High, Medium, or Low
-      assignment_type=assignment_type, # Essay, Exam, Project, etc.
-      completed=False,               # New assignments start as incomplete
-      date_created=datetime.now()    # Record when assignment was added
+  # Set defaults if dropdowns weren't selected
+  if not assignment_priority:
+    assignment_priority = "High"
+  if not assignment_type:
+    assignment_type = "Essay"
+
+  try:
+    # Add to database
+    new_row = app_tables.assignments.add_row(
+      name=assignment_name,
+      subject=assignment_subject,
+      due_date=assignment_due_date,
+      priority=assignment_priority,
+      assignment_type=assignment_type,
+      completed=False,
+      date_created=datetime.now()
     )
 
-    # Clear the input fields so user can add another assignment
-    self.text_box_name.text = ""
-    self.text_box_subject.text = ""
-    self.date_picker_due.date = None
-    self.drop_down_priority.selected_value = "High"
-    self.drop_down_type.selected_value = "Essay"
+    print(f"=== SUCCESS: Assignment saved! ID: {new_row.get_id()} ===")
 
-    # FIXED: Random motivational messages
-    messages = [
-      "🎉 Assignment added! You've got this!",
-      "✨ Great job staying organized!",
-      "💪 One step closer to success!",
-      "🌟 Assignment tracked! Now conquer it!",
-      "🚀 Added! Time to show what you can do!",
-      "📝 Logged! Let's crush this semester!",
-      "🎯 Perfect! Stay ahead of the game!",
-      "⭐ Brilliant! You're on top of things!"
-    ]
-    alert(random.choice(messages))
+  except Exception as e:
+    alert(f"❌ Error saving assignment: {e}")
+    return
 
-    # FIXED: Navigate to ViewAllForm after adding
-    open_form('ViewAllForm')
+  # Clear the form
+  self.text_box_name.text = ""
+  self.text_box_subject.text = ""
+  self.date_picker_due.date = None
+  self.drop_down_priority.selected_value = "High"
+  self.drop_down_type.selected_value = "Essay"
+
+  # Random motivational messages
+  messages = [
+    "🎉 Assignment added! You've got this!",
+    "✨ Great job staying organised!",
+    "💪 One step closer to success!",
+    "🌟 Assignment tracked! Now conquer it!",
+    "🚀 Added! Time to show what you can do!"
+  ]
+  alert(random.choice(messages))
+
+  # Navigate to ViewAllForm
+  open_form('ViewAllForm')
 
   def button_view_all_click(self, **event_args):
     """Navigate to the View All form"""
@@ -80,7 +98,7 @@ class Form1(Form1Template):
     open_form('ViewAllForm')
 
   def button_due_soon_click(self, **event_args):
-    """FIXED: Show assignments due in the next 3 days"""
+    """Show assignments due in the next 3 days"""
     today = datetime.now().date()
     three_days_from_now = today + timedelta(days=3)
 
