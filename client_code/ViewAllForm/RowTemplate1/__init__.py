@@ -26,7 +26,7 @@ class RowTemplate1(RowTemplate1Template):
       print(f"Error calculating time remaining: {e}")
 
   def set_priority_color(self):
-    """Set the background color of the card based on priority level"""
+    """Set the background colour of the card based on priority level"""
 
     # Get the priority value from this assignment's data
     # self.item contains all the data for this specific assignment

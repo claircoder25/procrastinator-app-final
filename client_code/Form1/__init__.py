@@ -1,156 +1,197 @@
+
 from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import random
 from datetime import datetime, timedelta
+import random
 
 class Form1(Form1Template):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
+    # This runs when the form first loads
+    # Initialize all components
     self.init_components(**properties)
 
-  def add_assignment_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    # Get values from inputs
-    name = self.assignment_name_input.text
-    subject = self.subject_input.text
-    due_date = self.due_date_picker.date
-    priority = self.priority_dropdown.selected_value
-    assignment_type = self.assignment_type_dropdown.selected_value
+  def button_add_click(self, **event_args):
+    """This runs when the 'Add Assignment' button is clicked"""
 
-    # Validation
+    # Get the values that the user typed into each input field
+    name = self.text_box_name.text
+    subject = self.text_box_subject.text
+    due_date = self.date_picker_due.date
+    priority = self.drop_down_priority.selected_value
+    assignment_type = self.drop_down_type.selected_value
+
+    # Validate inputs - make sure user filled in the required fields
+    # 'not name' means "if name is empty"
     if not name or not subject or not due_date:
-      alert("⚠️ Please fill in Assignment Name, Subject, and Due Date!")
-      return
+      # Show an error message popup if any required field is empty
+      alert("⚠️ Please fill in all required fields!")
+      return  # Stop the function here, don't add the assignment
 
+    # Set defaults if dropdowns weren't selected
     if not priority:
-      priority = "High"  # Default value
-
+      priority = "High"
     if not assignment_type:
-      assignment_type = "Essay"  # Default value
+      assignment_type = "Essay"
 
-    try:
-      # Add to database
-      app_tables.assignments.add_row(
-        name=name,
-        subject=subject,
-        due_date=due_date,
-        priority=priority,
-        assignment_type=assignment_type,
-        completed=False,
-        date_created=datetime.now()
-      )
+    # Add a new row to the 'assignments' table in the database
+    # This saves the assignment permanently
+    app_tables.assignments.add_row(
+      name=name,                      # Assignment name
+      subject=subject,                # Subject/class
+      due_date=due_date,             # When it's due
+      priority=priority,             # High, Medium, or Low
+      assignment_type=assignment_type, # Essay, Exam, Project, etc.
+      completed=False,               # New assignments start as incomplete
+      date_created=datetime.now()    # Record when assignment was added
+    )
 
-      # Random motivational messages
-      messages = [
-        "🎉 Assignment added! You've got this!",
-        "✨ Great job staying organized!",
-        "💪 One step closer to success!",
-        "🌟 Assignment tracked! Now conquer it!",
-        "🚀 Added! Time to show what you can do!",
-        "📝 Logged! Let's crush this semester!",
-        "🎯 Perfect! Stay ahead of the game!",
-        "⭐ Brilliant! You're on top of things!"
-      ]
-      alert(random.choice(messages))
+    # Clear the input fields so user can add another assignment
+    self.text_box_name.text = ""
+    self.text_box_subject.text = ""
+    self.date_picker_due.date = None
+    self.drop_down_priority.selected_value = "High"
+    self.drop_down_type.selected_value = "Essay"
 
-      # Clear the form
-      self.assignment_name_input.text = ""
-      self.subject_input.text = ""
-      self.due_date_picker.date = None
-      self.priority_dropdown.selected_value = "High"
-      self.assignment_type_dropdown.selected_value = "Essay"
+    # FIXED: Random motivational messages
+    messages = [
+      "🎉 Assignment added! You've got this!",
+      "✨ Great job staying organized!",
+      "💪 One step closer to success!",
+      "🌟 Assignment tracked! Now conquer it!",
+      "🚀 Added! Time to show what you can do!",
+      "📝 Logged! Let's crush this semester!",
+      "🎯 Perfect! Stay ahead of the game!",
+      "⭐ Brilliant! You're on top of things!"
+    ]
+    alert(random.choice(messages))
 
-      # Navigate to ViewAllForm
-      open_form('ViewAllForm')
+    # FIXED: Navigate to ViewAllForm after adding
+    open_form('ViewAllForm')
 
-    except Exception as e:
-      alert(f"Error adding assignment: {str(e)}")
+  def button_view_all_click(self, **event_args):
+    """Navigate to the View All form"""
+    # Open the ViewAllForm by name
+    # Make sure 'ViewAllForm' exactly matches the form name in your App Browser
+    open_form('ViewAllForm')
 
-  def assignment_type_templates_button_click(self, **event_args):
-    """This method is called when the Assignment Type Templates button is clicked"""
-    open_form('AssignmentTypeTemplates')
-
-  def due_soon_button_click(self, **event_args):
-    """This method is called when the Due Soon button is clicked"""
+  def button_due_soon_click(self, **event_args):
+    """FIXED: Show assignments due in the next 3 days"""
     today = datetime.now().date()
     three_days_from_now = today + timedelta(days=3)
 
-    # Query assignments due within 3 days that are not completed
-    due_soon = app_tables.assignments.search(
-      completed=False
-    )
+    # Get all incomplete assignments
+    all_assignments = app_tables.assignments.search(completed=False)
 
-    # Filter by date (Anvil query operators)
-    due_soon_filtered = [
-      assignment for assignment in due_soon 
-      if assignment['due_date'] and 
-      today <= assignment['due_date'].date() <= three_days_from_now
-    ]
+    # Filter to only assignments due within 3 days
+    due_soon = []
+    for assignment in all_assignments:
+      if assignment['due_date']:
+        # Convert to date for comparison
+        assignment_date = assignment['due_date'].date() if hasattr(assignment['due_date'], 'date') else assignment['due_date']
+        if today <= assignment_date <= three_days_from_now:
+          due_soon.append(assignment)
 
-    if len(due_soon_filtered) == 0:
+    # Display results
+    if len(due_soon) == 0:
       alert("✅ Great news! No assignments due in the next 3 days!")
     else:
-      message = f"⏰ You have {len(due_soon_filtered)} assignment(s) due soon:\n\n"
-      for assignment in due_soon_filtered:
-        days_until = (assignment['due_date'].date() - today).days
+      # Build the message
+      message = f"⏰ You have {len(due_soon)} assignment(s) due soon:\n\n"
+      for assignment in due_soon:
+        # Calculate days until due
+        assignment_date = assignment['due_date'].date() if hasattr(assignment['due_date'], 'date') else assignment['due_date']
+        days_until = (assignment_date - today).days
+
         if days_until == 0:
-          time_str = "Today!"
+          time_str = "TODAY! 🔴"
         elif days_until == 1:
-          time_str = "Tomorrow"
+          time_str = "Tomorrow 🟡"
         else:
-          time_str = f"In {days_until} days"
+          time_str = f"In {days_until} days 🟢"
 
         message += f"• {assignment['name']} ({assignment['subject']})\n"
         message += f"  Due: {assignment['due_date'].strftime('%m/%d/%Y')} - {time_str}\n"
         message += f"  Priority: {assignment['priority']}\n\n"
-      alert(message)
 
-  def statistics_button_click(self, **event_args):
-    """Calculate and display statistics about assignments"""
+      alert(message, title="Due Soon")
+
+  def button_weekly_view_click(self, **event_args):
+    """Navigate to Weekly view"""
+    # Open the WeeklyViewForm by name
+    # Only works if you've created a WeeklyViewForm
+    try:
+      open_form('WeeklyViewForm')
+    except:
+      # If WeeklyViewForm doesn't exist, show message
+      alert("Weekly view coming soon! For now, use View All to see your assignments.")
+
+  def button_stats_click(self, **event_args):
+    """Calculate and display comprehensive statistics about assignments"""
+
+    # Get all assignments
     all_assignments = list(app_tables.assignments.search())
-    completed = [a for a in all_assignments if a['completed']]
-    incomplete = [a for a in all_assignments if not a['completed']]
 
-    # Count by priority
-    high_priority = [a for a in all_assignments if a['priority'] == 'High']
-    medium_priority = [a for a in all_assignments if a['priority'] == 'Medium']
-    low_priority = [a for a in all_assignments if a['priority'] == 'Low']
+    # Count total number of assignments (completed and incomplete)
+    total = len(all_assignments)
 
-    # Count by type
+    # Count how many assignments are completed
+    completed = len([a for a in all_assignments if a['completed']])
+
+    # Count how many assignments are still pending
+    pending = len([a for a in all_assignments if not a['completed']])
+
+    # Calculate completion rate as a percentage
+    if total > 0:
+      completion_rate = (completed / total) * 100
+    else:
+      completion_rate = 0
+
+    #Count by priority
+    high_priority = len([a for a in all_assignments if a['priority'] == 'High'])
+    medium_priority = len([a for a in all_assignments if a['priority'] == 'Medium'])
+    low_priority = len([a for a in all_assignments if a['priority'] == 'Low'])
+
+    #Count by assignment type
     types_count = {}
     for assignment in all_assignments:
       atype = assignment['assignment_type']
       if atype:
         types_count[atype] = types_count.get(atype, 0) + 1
 
-    # Calculate completion rate
-    completion_rate = (len(completed) / len(all_assignments) * 100) if len(all_assignments) > 0 else 0
+    #Calculate average time to complete assignments
+    completed_assignments = [a for a in all_assignments if a['completed']]
 
-    # Build statistics message
+    total_days = 0
+    count = 0
+
+    for assignment in completed_assignments:
+      if assignment['date_created'] and assignment.get('date_completed'):
+        days = (assignment['date_completed'] - assignment['date_created']).days
+        total_days += days
+        count += 1
+    
+    if count > 0:
+      avg_days = total_days / count
+    else:
+      avg_days = 0
+    
+    # FIXED: Build comprehensive statistics message
     stats = f"""📊 Assignment Statistics:
     
-    
-Total Assignments: {len(all_assignments)}
-Completed: {len(completed)}
-Incomplete: {len(incomplete)}
+Total Assignments: {total}
+Completed: {completed}
+Pending: {pending}
 Completion Rate: {completion_rate:.1f}%
 
 Priority Breakdown:
-🔴 High: {len(high_priority)}
-🟡 Medium: {len(medium_priority)}
-🟢 Low: {len(low_priority)}
+🔴 High: {high_priority}
+🟡 Medium: {medium_priority}
+🟢 Low: {low_priority}
 """
-
-    if types_count:
-      stats += "\nAssignment Types:\n"
-      for atype, count in sorted(types_count.items()):
-        stats += f"  • {atype}: {count}\n"
-
-    alert(stats, title="Your Progress")
-
-  def view_all_button_click(self, **event_args):
-    """This method is called when the View All button is clicked"""
-    open_form('ViewAllForm')
+    
+  def button_assignment_templates_click(self, **event_args):
+    """Navigate to Assignment Type Templates"""
+    open_form('AssignmentTypeTemplates')
