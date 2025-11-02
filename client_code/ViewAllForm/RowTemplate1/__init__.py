@@ -11,6 +11,7 @@ class RowTemplate1(RowTemplate1Template):
 
     # Set Form properties and Data Bindings
     self.init_components(**properties)
+    
 
     # Set the background colour based on the assignment's priority level
     # Wrap in try/except to handle any missing components gracefully
@@ -25,6 +26,7 @@ class RowTemplate1(RowTemplate1Template):
     except Exception as e:
       print(f"Error calculating time remaining: {e}")
 
+  
   def set_priority_color(self):
     """Set the background colour of the card based on priority level"""
 
@@ -45,6 +47,10 @@ class RowTemplate1(RowTemplate1Template):
       # Low priority = light green background (less urgent)
       self.card_1.background = "#ccffcc"
 
+
+      self.update_due_date_label() 
+  
+  #show how many days are remaining until due date
   def calculate_time_remaining(self):
     """Calculate how many days until the assignment is due and display it"""
 
@@ -57,7 +63,7 @@ class RowTemplate1(RowTemplate1Template):
     # Only calculate if there is a due date set
     if due_date:
       # Calculate the difference in days
-      # Subtracting dates gives a timedelta, days converts to number of days
+      # Subtracting dates gives us a timedelta, days converts to number of days
       days_remaining = (due_date - today).days
 
       # Check if assignment is overdue (negative days)
