@@ -32,7 +32,7 @@ class RowTemplate1(RowTemplate1Template):
     # self.item contains all the data for this specific assignment
     priority = self.item['priority']
 
-    # Change the card's background color based on priority
+    # Change the card's background colour based on priority
     if priority == "High":
       # High priority = light red background (urgent!)
       self.card_1.background = "#ffcccc"
@@ -57,7 +57,7 @@ class RowTemplate1(RowTemplate1Template):
     # Only calculate if there is a due date set
     if due_date:
       # Calculate the difference in days
-      # Subtracting dates gives us a timedelta, .days converts to number of days
+      # Subtracting dates gives a timedelta, days converts to number of days
       days_remaining = (due_date - today).days
 
       # Check if assignment is overdue (negative days)
@@ -74,7 +74,7 @@ class RowTemplate1(RowTemplate1Template):
         self.label_time_remaining.foreground = "orange"  # Orange = urgent warning
         self.label_time_remaining.bold = True
 
-      # Check if assignment is due tomorrow
+      # Check if the assignment is due tomorrow
       elif days_remaining == 1:
         self.label_time_remaining.text = "⏰ Due tomorrow"
         self.label_time_remaining.foreground = "orange"  # Still urgent
@@ -83,7 +83,7 @@ class RowTemplate1(RowTemplate1Template):
       else:
         # Show the number of days remaining
         self.label_time_remaining.text = f"📅 {days_remaining} days remaining"
-        # Default color (black) - no special formatting needed
+        # Default colour (black) - no special formatting needed
     else:
       # If no due date is set
       self.label_time_remaining.text = "No due date set"
@@ -100,6 +100,7 @@ class RowTemplate1(RowTemplate1Template):
 
     # Show a motivational message to encourage the student
     # List of different positive messages
+    #Added emojis to make the random messages feel more personal, motivational and fun
     messages = [
       "Great job! Keep up the good work! 🎉",
       "Awesome! You're making progress! 💪",
@@ -117,7 +118,7 @@ class RowTemplate1(RowTemplate1Template):
     alert(random.choice(messages))
 
     # Remove this assignment from the display
-    # Since it's complete, we don't need to see it anymore
+    # Since it's complete, doesn't need to be seen anymore
     self.remove_from_parent()
 
   def button_delete_click(self, **event_args):
@@ -132,7 +133,7 @@ class RowTemplate1(RowTemplate1Template):
       # Remove this assignment from the display
       self.remove_from_parent()
 
-  #take user to form1 to add new assignment
+  # Takes user to form1 to add new assignment
   def button_add_click(self, **event_args):
     """Navigate to Form1 to add new assignment"""
     open_form('Form1')

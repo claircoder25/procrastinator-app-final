@@ -21,12 +21,12 @@ db_schema:
     - admin_ui: {order: 5, width: 200}
       name: completed
       type: bool
-    - admin_ui: {order: 6, width: 200}
+    - admin_ui: {order: 8, width: 200}
       name: date_created
-      type: date
-    - admin_ui: {order: 7, width: 200}
+      type: datetime
+    - admin_ui: {order: 9, width: 200}
       name: date_completed
-      type: date
+      type: datetime
     server: full
     title: Assignments
 dependencies: []
