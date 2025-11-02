@@ -70,7 +70,7 @@ class Form1(Form1Template):
     alert(random.choice(messages))
 
 
-  # when these buttons are clicked it will take user to respected form
+  # when these buttons are clicked, it will take the user to the respective form
   def button_view_all_click(self, **event_args):
     """Navigate to the View All page"""
     open_form('ViewAllForm')
@@ -80,7 +80,7 @@ class Form1(Form1Template):
    open_form('AssignmentTypeTemplates')
 
 
-  # when the button is clicked it will show users 
+  # when the button is clicked, it will show users 
   def button_due_soon_click(self, **event_args):
     """Show assignments due in the next 3 days"""
     today = datetime.now().date()
@@ -111,7 +111,7 @@ class Form1(Form1Template):
     alert(message, title="Due Soon")
 
 
-  # when the  
+  # when the   
   def button_stats_click(self, **event_args):
     """Calculate and display statistics about assignments"""
     all_assignments = list(app_tables.assignments.search())
