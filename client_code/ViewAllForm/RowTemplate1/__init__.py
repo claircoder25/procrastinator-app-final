@@ -132,10 +132,13 @@ class RowTemplate1(RowTemplate1Template):
       # Remove this assignment from the display
       self.remove_from_parent()
 
+  #take user to form1 to add new assignment
   def button_add_click(self, **event_args):
-    """This method is called when the button is clicked"""
+    """Navigate to Form1 to add new assignment"""
+    open_form('Form1')
+
+  def file_loader_1_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
     pass
 
-  def create_new_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
+  

@@ -23,7 +23,7 @@ components:
   type: ColumnPanel
 - data_bindings: []
   layout_properties: {slot: default}
-  name: repeating_panel_2
+  name: repeating_panel_1
   properties: {item_template: ViewAllForm.RowTemplate1, spacing_above: small}
   type: RepeatingPanel
 - components: []

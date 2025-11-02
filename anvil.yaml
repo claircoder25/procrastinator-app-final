@@ -24,6 +24,9 @@ db_schema:
     - admin_ui: {order: 6, width: 200}
       name: date_created
       type: date
+    - admin_ui: {order: 7, width: 200}
+      name: date_completed
+      type: date
     server: full
     title: Assignments
 dependencies: []

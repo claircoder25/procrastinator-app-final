@@ -6,7 +6,8 @@ components:
       name: button_add
       properties: {align: left, role: null, text: + Add New Assignment}
       type: Button
-    - layout_properties: {grid_position: 'KOGZTL,YFYMDZ'}
+    - event_bindings: {change: file_loader_1_change}
+      layout_properties: {grid_position: 'KOGZTL,YFYMDZ'}
       name: file_loader_1
       properties: {background: 'theme:Secondary', icon: 'fa:upload', role: filled-button, text: Upload Assignment Document}
       type: FileLoader

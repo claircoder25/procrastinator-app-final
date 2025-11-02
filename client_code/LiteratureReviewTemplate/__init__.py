@@ -10,12 +10,12 @@ class LiteratureReviewTemplate(LiteratureReviewTemplateTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  # button to go back to Assignment Template
+# button to go back to Assignment Template
   def button_back_click(self, **event_args):
     """Go back to templates page"""
     open_form('AssignmentTypeTemplates')
     
 # button to go back to form1
-    def button_home_click(self, **event_args):
-      """Go back to the main form"""
-    open_form('Form1')
+  def button_home_click(self, **event_args):
+   """Go back to the main form"""
+   open_form('Form1')

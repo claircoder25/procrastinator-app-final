@@ -27,10 +27,5 @@ class AssignmentTypeTemplates(AssignmentTypeTemplatesTemplate):
     """Open Literature Review Template form"""
     open_form('LiteratureReviewTemplate')
 
-  def button_literature_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
 
-  def button_exam_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('ExamGuideTemplate')
+

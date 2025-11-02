@@ -188,7 +188,8 @@ components:
   properties: {}
   type: FlowPanel
 - components:
-  - layout_properties: {grid_position: 'WZMISI,POQNQR'}
+  - event_bindings: {click: button_back_click}
+    layout_properties: {grid_position: 'WZMISI,POQNQR'}
     name: button_back
     properties: {background: '#ab8578', foreground: 'theme:On Primary Container', role: outlined-button, text: Back to Assignment Templates}
     type: Button
