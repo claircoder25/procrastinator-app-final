@@ -60,12 +60,11 @@ class RowTemplate1(RowTemplate1Template):
     today = datetime.now().date()
 
     # Only calculate if there is a due date set
+    # Calculate the difference in days
+    # Subtracting dates gives us a timedelta, days converts to number of days
     if due_date:
       days_remaining = (due_date.date() - today).days    
-    if due_date:
-      # Calculate the difference in days
-      # Subtracting dates gives us a timedelta, days converts to number of days
-      days_remaining = (due_date - today).days
+
 
       # Check if assignment is overdue (negative days)
       if days_remaining < 0:
