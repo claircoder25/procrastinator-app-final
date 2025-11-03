@@ -15,14 +15,17 @@ class AssignmentTypeTemplates(AssignmentTypeTemplatesTemplate):
     """Open Essay Template form"""
     open_form('EssayTemplate')
 
+  # When clicked goes to lab report template
   def button_report_click(self, **event_args):
     """Open Report Template form"""
     open_form('ReportTemplate')
 
+  # Goes to Exam guide template
   def button_exam_guide_click(self, **event_args):
     """Open Exam Guide form"""
     open_form('ExamGuideTemplate')
 
+  # Goes to Literature review template
   def button_literature_review_click(self, **event_args):
     """Open Literature Review Template form"""
     open_form('LiteratureReviewTemplate')
