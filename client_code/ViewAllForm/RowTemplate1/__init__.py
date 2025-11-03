@@ -50,7 +50,7 @@ class RowTemplate1(RowTemplate1Template):
 
       self.update_due_date_label() 
   
-  #show how many days are remaining until due date
+  # Show how many days are remaining until due date
   def calculate_time_remaining(self):
     """Calculate how many days until the assignment is due and display it"""
 
@@ -106,7 +106,7 @@ class RowTemplate1(RowTemplate1Template):
 
     # Show a motivational message to encourage the student
     # List of different positive messages
-    #Added emojis to make the random messages feel more personal, motivational and fun
+    # Add emojis to make the random messages feel more personal, motivational and fun
     messages = [
       "Great job! Keep up the good work! 🎉",
       "Awesome! You're making progress! 💪",
