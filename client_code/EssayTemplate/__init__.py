@@ -16,8 +16,8 @@ class EssayTemplate(EssayTemplateTemplate):
 
   def button_back_click(self, **event_args):
     """Go back to templates page"""
-  open_form('AssignmentTypeTemplates')
+    open_form('AssignmentTypeTemplates')
 
   def button_home_click(self, **event_args):
     """Go back to Form1 page"""
-  open_form('Form1')
+    open_form('Form1')

@@ -17,5 +17,5 @@ class LiteratureReviewTemplate(LiteratureReviewTemplateTemplate):
     
 # button to go back to form1
   def button_home_click(self, **event_args):
-   """Go back to the main form"""
-   open_form('Form1')
+    """Go back to the main form"""
+    open_form('Form1')
