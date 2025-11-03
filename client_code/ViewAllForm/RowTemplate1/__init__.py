@@ -26,7 +26,7 @@ class RowTemplate1(RowTemplate1Template):
     except Exception as e:
       print(f"Error calculating time remaining: {e}")
 
-  
+  # Replace the background of the assignment card to be red, yellow, or green depending on priority level
   def set_priority_color(self):
     """Set the background colour of the card based on priority level"""
 
@@ -56,7 +56,6 @@ class RowTemplate1(RowTemplate1Template):
 
     # Get the due date for this assignment
     due_date = self.item['due_date']
-
     # Get today's date (without the time)
     today = datetime.now().date()
 
@@ -69,7 +68,7 @@ class RowTemplate1(RowTemplate1Template):
       # Check if assignment is overdue (negative days)
       if days_remaining < 0:
         # If overdue, show how many days past due
-        # abs() makes the number positive so we can say "overdue by X days"
+        # abs() makes the number positive so it says "overdue by X days"
         self.label_time_remaining.text = f"⚠️ OVERDUE by {abs(days_remaining)} days!"
         self.label_time_remaining.foreground = "red"     # Make text red (danger!)
         self.label_time_remaining.bold = True            # Make text bold to stand out
