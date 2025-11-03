@@ -9,7 +9,7 @@ import random
 class Form1(Form1Template):
   def __init__(self, **properties):
     """This runs when the form first loads."""
-    # Initialize all UI components defined in the design view
+    # Initialise all UI components defined in the design view
     self.init_components(**properties)
 
 
@@ -32,7 +32,7 @@ class Form1(Form1Template):
       assignment_due_date = datetime.combine(assignment_due_date, datetime.min.time())
 
     # Validate required fields with a conditional statement — name, subject, and due date must not be empty
-    # If there are empty fields, display an alert pop up message
+    # If there are empty fields, display an alert pop-up message
     if not assignment_name or not assignment_subject or not assignment_due_date:
       alert("⚠️ Please fill in all required fields!")
       return
@@ -70,7 +70,7 @@ class Form1(Form1Template):
     # Random motivational messages to encourage the user
     messages = [
       "🎉 Assignment added! You've got this!",
-      "✨ Great job staying organized!",
+      "✨ Great job staying organised!",
       "💪 One step closer to success!",
       "🌟 Assignment tracked! Now conquer it!",
       "🚀 Added! Time to show what you can do!"
@@ -133,7 +133,7 @@ class Form1(Form1Template):
     alert(message, title="Due Soon")
 
 
-  # When the button is clicked a pop up message will display the following assignment statistics
+  # When the button is clicked, a pop-up message will display the following assignment statistics
   def button_stats_click(self, **event_args):
     """Calculates and displays assignment statistics such as:
     - Total completed/pending
@@ -198,5 +198,5 @@ Priority Breakdown:
 
     stats += "\n\nKeep up the great work! 🌟"
 
-    # Display stats in a popup
+    # Display stats in a pop-up
     alert(stats, title="Your Progress")

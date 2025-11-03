@@ -42,8 +42,7 @@ components:
         name: label_type
         properties: {background: 'theme:Surface Variant', foreground: 'theme:Secondary', text: 'Type: {item[''assignment_type'']}'}
         type: Label
-      - data_bindings:
-        - {code: 'self.item['''']', property: text, writeback: false}
+      - data_bindings: []
         layout_properties: {grid_position: 'TTGZOV,DZKFUC'}
         name: label_time_remaining
         properties: {background: 'theme:Surface Variant', foreground: 'theme:On Secondary Container', role: input-prompt, text: ''}

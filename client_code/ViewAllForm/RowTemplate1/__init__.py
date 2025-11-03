@@ -26,7 +26,7 @@ class RowTemplate1(RowTemplate1Template):
     except Exception as e:
       print(f"Error calculating time remaining: {e}")
 
-  # Replace the background of the assignment card to be red, yellow, or green depending on priority level
+  # Replace the background of the assignment card to be red, yellow, or green, depending on priority level
   def set_priority_color(self):
     """Set the background colour of the card based on priority level"""
 
@@ -60,6 +60,8 @@ class RowTemplate1(RowTemplate1Template):
     today = datetime.now().date()
 
     # Only calculate if there is a due date set
+    if due_date:
+      days_remaining = (due_date.date() - today).days    
     if due_date:
       # Calculate the difference in days
       # Subtracting dates gives us a timedelta, days converts to number of days
