@@ -31,7 +31,7 @@ class Form1(Form1Template):
     if assignment_due_date:
       assignment_due_date = datetime.combine(assignment_due_date, datetime.min.time())
 
-    # Validate required fields with conditional statement — name, subject, and due date must not be empty
+    # Validate required fields with a conditional statement — name, subject, and due date must not be empty
     # If there are empty fields, display an alert pop up message
     if not assignment_name or not assignment_subject or not assignment_due_date:
       alert("⚠️ Please fill in all required fields!")
