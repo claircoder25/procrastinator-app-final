@@ -13,7 +13,7 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
 
-  # ---------- ADD ASSIGNMENT ----------
+  # When this button is clicked, all data that was put into the text boxes is collected, validated, saved to 'assignments' data table clears the form, and shows a success message.
   def button_add_click(self, **event_args):
     """Triggered when the '+ Add Assignment' button is clicked.
     Collects data from the input fields, validates it, saves it to the
@@ -31,7 +31,8 @@ class Form1(Form1Template):
     if assignment_due_date:
       assignment_due_date = datetime.combine(assignment_due_date, datetime.min.time())
 
-    # Validate required fields — name, subject, and due date must not be empty
+    # Validate required fields with conditional statement — name, subject, and due date must not be empty
+    # If there are empty fields, display an alert pop up message
     if not assignment_name or not assignment_subject or not assignment_due_date:
       alert("⚠️ Please fill in all required fields!")
       return
@@ -77,17 +78,17 @@ class Form1(Form1Template):
     alert(random.choice(messages))
 
 
-  # ---------- NAVIGATION ----------
+  # When these buttons are clicked it will take user to the respective form
   def button_view_all_click(self, **event_args):
     """Opens the 'ViewAllForm' when the 'View All' button is clicked."""
     open_form('ViewAllForm')
 
-  def button_assignment_templates_click(self, **event_args):
+  def button_templates_click(self, **event_args):
     """Opens the 'AssignmentTypeTemplates' page when clicked."""
     open_form('AssignmentTypeTemplates')
 
 
-  # ---------- DUE SOON ----------
+  # When the button is clicked display a message showing assignments due in the next 1-3 days
   def button_due_soon_click(self, **event_args):
     """Shows all assignments due within the next 3 days."""
 
@@ -104,12 +105,12 @@ class Form1(Form1Template):
       if a['due_date'] and today <= a['due_date'].date() <= three_days_from_now
     ]
 
-    # If none are due soon, display a positive message
+    # If none are due in the next 3 days, display a positive message
     if not due_soon:
       alert("✅ Great news! No assignments due in the next 3 days!")
       return
 
-    # Otherwise, build a message summarizing due assignments
+    # Otherwise, build a message summarising due assignments
     message = f"⏰ You have {len(due_soon)} assignment(s) due soon:\n\n"
     for a in due_soon:
       # Calculate how many days remain
@@ -120,8 +121,11 @@ class Form1(Form1Template):
         time_str = "Tomorrow 🟡"
       else:
         time_str = f"In {days_until} days 🟢"
-
+      
+      # Formatted string 
       message += f"• {a['name']} ({a['subject']})\n"
+      # Use the strftime method (string format time)
+      # Should print something like: Due 02/11/2025 - 3 days left
       message += f"  Due: {a['due_date'].strftime('%d/%m/%Y')} - {time_str}\n"
       message += f"  Priority: {a['priority']}\n\n"
 
@@ -129,7 +133,7 @@ class Form1(Form1Template):
     alert(message, title="Due Soon")
 
 
-  # ---------- STATISTICS ----------
+  # When the button is clicked a pop up message will display the following assignment statistics
   def button_stats_click(self, **event_args):
     """Calculates and displays assignment statistics such as:
     - Total completed/pending
